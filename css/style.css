@@ -6,10 +6,37 @@ a{
   text-decoration:none;
 }
 
+h1 {
+  font-family: 'MuseoSlab500Regular', sans-serif;
+  text-align: center;
+  color: #999;
+  font-size: 42px;
+  margin: 30px 0 0 0;
+}
+
+.title {
+  width: 700px;
+  margin: 0 auto;
+  padding-right: 35px;
+}
+
+.title p {
+  text-align: center;
+}
+
 p{
   font-size: 12px;
   font-family:'Lucida Grande', 'Lucida Sans Unicode', sans-serif;
   line-height: 1.5em;
+}
+
+#github-logo {
+  position: fixed;
+  bottom: -5px;
+  right: 20px;
+  z-index: 1;
+  display: block;
+  opacity: 0.4;
 }
 
 .projects{
@@ -20,168 +47,6 @@ p{
 
 .link {
   display:none;
-}
-
-/* Github */
-
-.github-widget:nth-child(even) .github-box{
-  margin-right:0 !important
-}
-
-.github-box{
-  font-family:"proxima-nova-1","proxima-nova-2","Helvetica Neue",Arial,sans-serif;
-  background:#fafafa;
-  border:1px solid #ddd;
-  color:#666;
-  -moz-border-radius:5px;
-  -webkit-border-radius:5px;
-  -o-border-radius:5px;
-  -ms-border-radius:5px;
-  -khtml-border-radius:5px;
-  border-radius:5px;
-  float:left;
-  margin-right:1.2em;
-  margin-bottom:2em;
-  width:46%
-}
-
-.github-box a{
-  color:#4183C4;
-  border:none
-}
-
-.github-box .github-box-title{
-  position:relative;
-  border-bottom:1px solid #ddd;
-  -moz-border-radius:5px 5px 0 0;
-  -webkit-border-radius:5px 5px 0 0;
-  -o-border-radius:5px 5px 0 0;
-  -ms-border-radius:5px 5px 0 0;
-  -khtml-border-radius:5px 5px 0 0;
-  border-radius:5px 5px 0 0;
-  background:#fcfcfc;
-  background:-moz-linear-gradient(#fcfcfc, #ebebeb);
-  background:-webkit-linear-gradient(#fcfcfc, #ebebeb);
-  -ms-filter:"progid:DXImageTransform.Microsoft.gradient(startColorstr='#fcfcfc',endColorstr='#ebebeb')"
-}
-
-.github-box .github-box-title h3{
-  font-family:helvetica,arial,sans-serif;font-weight:normal;
-  font-size:16px;
-  color:gray;
-  margin:0;
-  padding:10px 10px 10px 10px
-}
-
-.github-box .github-box-title h3 .repo{
-  font-weight:bold
-}
-
-.github-box .github-box-title .github-stats{
-  position:absolute;
-  top:10px;
-  right:10px;
-  background:white;
-  border:1px solid #ddd;
-  border-radius:3px;
-  font-size:11px;
-  font-weight:bold;
-  line-height:21px;
-  height:21px
-}
-
-.github-box .github-box-title .github-stats a{
-  display:inline-block;
-  height:21px;
-  color:#666;
-  padding:0 5px 0 18px;
-  background:url('../img/repo.png') no-repeat;
-  filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
-  opacity:0.7
-}
-
-.github-box .github-box-title .github-stats a:hover{
-  filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
-  opacity:1
-}
-
-.github-box .github-box-title .github-stats .watchers{
-  border-right:1px solid #ddd;
-  background-position:3px 4px
-}
-
-.github-box .github-box-title .github-stats .forks{
-  background-position:3px -19px;
-  padding-left:15px
-}
-
-.github-box .github-box-content{
-  padding:10px;
-  font-weight:300;
-  font-size:0.7em
-}
-
-.github-box .github-box-content p{
-  margin:0
-}
-
-.github-box .github-box-content .link{
-  font-weight:bold
-}
-
-.github-box .github-box-download{
-  position:relative;
-  border-top:1px solid #ddd;
-  background:white;
-  border-radius:0 0 3px 3px;
-  padding:10px;
-  height:24px
-}
-
-.github-box .github-box-download .updated{
-  margin:0;
-  font-size:13px;
-  color:#666;
-  line-height:24px
-}
-
-.github-box .github-box-download .updated strong{
-  font-size:12px;
-  font-weight:bold;
-  color:#000
-}
-
-.github-box .github-box-download .download{
-  position:absolute;
-  display:block;
-  top:10px;
-  right:10px;
-  height:24px;
-  line-height:24px;
-  font-size:12px;
-  color:#666;
-  font-weight:bold;
-  text-shadow:0 1px 0 rgba(255,255,255,0.9);
-  padding:0 10px;
-  border:1px solid #ddd;
-  border-bottom-color:#bbb;
-  border-radius:3px;
-  display:block;
-  text-indent:-9999px;
-  width:24px;
-  padding:0;
-  background:url('../img/download.png') no-repeat 6px 6px,-webkit-linear-gradient(#f5f5f5, #e5e5e5);
-  background:url('../img/download.png') no-repeat 6px 6px,-moz-linear-gradient(#f1f7fa, #dbeaf1);
-  filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
-  opacity:0.7
-}
-
-.github-box .github-box-download .download:hover{
-  color:#527894;
-  border-color:#cfe3ed;
-  border-bottom-color:#9fc7db;
-  filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
-  opacity:1
 }
 
 /* Font-face */
