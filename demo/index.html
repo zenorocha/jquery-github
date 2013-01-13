@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+
+  <meta charset="UTF-8">
+  <title>jQuery Github Repos</title>
+
+  <!-- Plugin CSS -->
+  <link rel="stylesheet" href="../assets/base.css">
+
+  <!-- Demo CSS -->
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+  <div class="title">
+    <h1>jQuery Github Repos</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor<br> incididunt ut labore et dolore
+      magna aliqua. Ut enim ad minim veniam
+    </p>
+  </div>
+
+  <div class="projects">
+
+    <div class="github-widget" data-repo="jquery-boilerplate/boilerplate"></div>
+    <div class="github-widget" data-repo="zenorocha/diveintohtml5"></div>
+    <div class="github-widget" data-repo="zenorocha/talks"></div>
+    <div class="github-widget" data-repo="zenorocha/hub.me"></div>
+  </div>
+
+  <img id="github-logo" src="img/cat.png" alt="Github's Logo" />
+
+  <a href="https://github.com/zenorocha/github-project-repos">
+    <img class="github-ribbon" src="img/github-ribbon.png" alt="Fork me on GitHub">
+  </a>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <script src="../jquery.github.repos.js"></script>
+
+  <script>
+    $('.github-widget').githubWidget();
+  </script>
+
+</body>
+</html>

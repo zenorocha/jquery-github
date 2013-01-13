@@ -39,6 +39,13 @@ p{
   opacity: 0.4;
 }
 
+.github-ribbon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: 0;
+}
+
 .projects{
   width:700px;
   margin:0 auto;
