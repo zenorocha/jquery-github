@@ -1,8 +1,8 @@
 /*
- *  Project:
- *  Description:
- *  Author:
- *  License:
+ *  Project: jQuery Github Repos
+ *  Description: A jQuery plugin to display your Github Repositories.
+ *  Author: Zeno Rocha
+ *  License: MIT
  */
 
 // the semi-colon before function invocation is a safety net against concatenated
@@ -19,7 +19,7 @@
     // minified (especially when both are regularly referenced in your plugin).
 
     // Create the defaults once
-    var pluginName = 'githubWidget',
+    var pluginName = 'githubRepos',
         document = window.document,
         defaults = {
             propertyName: "value"
