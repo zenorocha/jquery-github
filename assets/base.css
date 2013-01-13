@@ -69,7 +69,7 @@
   height:21px;
   color:#666;
   padding:0 5px 0 18px;
-  background:url('../img/repo.png') no-repeat;
+  background:url('btn-sprite.png') no-repeat;
   filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
   opacity:0.7
 }
@@ -85,7 +85,7 @@
 }
 
 .github-box .github-box-title .github-stats .forks{
-  background-position:3px -19px;
+  background-position: 2px -14px;
   padding-left:15px
 }
 
@@ -144,8 +144,8 @@
   text-indent:-9999px;
   width:24px;
   padding:0;
-  background:url('../img/download.png') no-repeat 6px 6px,-webkit-linear-gradient(#f5f5f5, #e5e5e5);
-  background:url('../img/download.png') no-repeat 6px 6px,-moz-linear-gradient(#f1f7fa, #dbeaf1);
+  background: url('btn-sprite.png') no-repeat 4px -31px,-webkit-linear-gradient(whiteSmoke, #E5E5E5);
+  background:url('btn-sprite.png') no-repeat 4px -31px,-moz-linear-gradient(#f1f7fa, #dbeaf1);
   filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
   opacity:0.7
 }
