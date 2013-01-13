@@ -2,6 +2,8 @@
 
 A jQuery plugin to display your Github Repositories.
 
+![Github Repo Demonstration](http://f.cl.ly/items/0J1y0o0D461A0T1v1328/Screen%20Shot%202013-01-13%20at%207.32.55%20PM.png)
+
 ## Usage
 
 Use the `github-widget` class and create an attribute called `data-repo`:
