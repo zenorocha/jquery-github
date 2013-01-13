@@ -1,9 +1,17 @@
-body{
-  background:#F8F8F8 url('../img/bg-noise.png') top left;
+body {
+  background: #F8F8F8 url('../img/bg-noise.png') top left;
 }
 
-a{
-  text-decoration:none;
+a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #999;
+}
+
+p {
+  font-size: 12px;
+  font-family: 'Lucida Grande', 'Lucida Sans Unicode', sans-serif;
+  line-height: 1.5em;
 }
 
 h1 {
@@ -24,10 +32,10 @@ h1 {
   text-align: center;
 }
 
-p{
-  font-size: 12px;
-  font-family:'Lucida Grande', 'Lucida Sans Unicode', sans-serif;
-  line-height: 1.5em;
+.credits {
+  margin: 0 auto;
+  width: 700px;
+  text-align: center;
 }
 
 #github-logo {
@@ -47,13 +55,13 @@ p{
 }
 
 .projects{
-  width:700px;
-  margin:0 auto;
+  width: 700px;
+  margin: 0 auto;
   padding: 30px;
 }
 
 .link {
-  display:none;
+  display: none;
 }
 
 /* Font-face */
