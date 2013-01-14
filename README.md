@@ -43,6 +43,7 @@ And that's it \o/
 ## History
 
 * v0.3 January 13, 2013
+  * Added live demo
   * Replaced single images for a sprite
   * Added minified version
 * v0.2 September 11, 2012
