@@ -36,6 +36,7 @@ h1 {
   margin: 0 auto;
   width: 700px;
   text-align: center;
+  clear: both;
 }
 
 #github-logo {
@@ -58,10 +59,6 @@ h1 {
   width: 700px;
   margin: 0 auto;
   padding: 30px;
-}
-
-.link {
-  display: none;
 }
 
 /* Font-face */
