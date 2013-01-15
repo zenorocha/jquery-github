@@ -81,11 +81,8 @@
               }
 
             }
-
           }
         });
-
-
 
       }
 
@@ -95,7 +92,7 @@
 
       var self = this;
       var date = new Date(repo.pushed_at);
-      var pushed_at = date.getMonth() + '/' + date.getDate() + '/' + date.getFullYear();
+      var pushed_at = date.getDate() + '/' + (date.getMonth() + 1) + '/' + date.getFullYear();
 
       var $widget = $(' \
         <div class="github-box">  \
