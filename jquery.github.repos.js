@@ -49,10 +49,14 @@
     Plugin.prototype.init = function () {
 
       var self = this;
-      var cached = sessionStorage.getItem('gh-repos:' + this.repo);
+      var cached;
 
       // Attempt to get cached repo data
-      if (window.sessionStorage && (cached != null)) {
+      if (window.sessionStorage) {
+        cached = sessionStorage.getItem('gh-repos:' + this.repo);
+      }
+
+      if (cached != null) {
         self.applyTemplate(JSON.parse(cached));
       }
       else {
