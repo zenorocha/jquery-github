@@ -1,5 +1,5 @@
 /*
- *  jQuery Github Repos v0.3.1
+ *  jQuery Github Repos v0.2.2
  *  A jQuery plugin to display your Github Repositories.
  *  http://git.io/3A1RMg
  *
@@ -49,6 +49,13 @@
     Plugin.prototype.init = function () {
 
       var self = this;
+      var cached = sessionStorage.getItem('gh-repos:' + this.repo);
+
+      // Attempt to get cached repo data
+      if (window.sessionStorage && (cached != null)) {
+        self.applyTemplate(JSON.parse(cached));
+      }
+      else {
 
         $.ajax({
           url: 'https://api.github.com/repos/' + this.repo,
@@ -61,18 +68,28 @@
                 return;
             }
             else {
+
               self.applyTemplate(results.data);
+
+              // Cache data
+              if (window.sessionStorage) {
+                sessionStorage.setItem('gh-repos:' + self.repo, JSON.stringify(results.data));
+              }
+
             }
 
           }
         });
+
+
+
+      }
 
     };
 
     Plugin.prototype.applyTemplate = function (repo) {
 
       var self = this;
-
       var date = new Date(repo.pushed_at);
       var pushed_at = date.getMonth() + '/' + date.getDate() + '/' + date.getFullYear();
 
@@ -91,13 +108,12 @@
                 <p>' + repo.description + ' &mdash; <a href="' + repo.url.replace('api.','').replace('repos/','') + '#readme">Read More</a></p> \
             </div> \
             <div class="github-box-download"> \
-                <p class="repo-update">Latest commit to <strong>master</strong> on ' + repo.pushed_at + '</p> \
+                <p class="repo-update">Latest commit to <strong>master</strong> on ' + pushed_at + '</p> \
                 <a class="repo-download" href="' + repo.url.replace('api.','').replace('repos/','') + '/zipball/master">Download as zip</a> \
             </div> \
         </div> \
       ');
 
-      // console.log($widget);
       self.appendTemplate($widget);
 
     };
