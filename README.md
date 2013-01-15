@@ -31,6 +31,8 @@ $('.github-repos').githubRepos();
 
 And that's it \o/
 
+[Check the full example here](https://github.com/zenorocha/jquery-github-repos/blob/master/demo/index.html)
+
 ## Forks
 
 Prefer a non-jquery version with pure JavaScript? No problem, [@ricardobeat](https://github.com/ricardobeat) already did one :) Check [his fork!](https://github.com/ricardobeat/github-repos)
