@@ -32,6 +32,12 @@ Call the plugin:
 
 And that's it \o/
 
+## Forks
+
+Prefer a non-jquery version with pure JavaScript? No problem, [@ricardobeat](https://github.com/ricardobeat) already did one :)
+
+Check [his fork!](https://github.com/ricardobeat/github-repos)
+
 ## Contributing
 
 1. Fork it!
