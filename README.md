@@ -16,18 +16,17 @@ Include jQuery:
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 ```
 
-Include this jQuery plugin:
+Include plugin's CSS and JS:
 
 ```html
+<link rel="stylesheet" href="assets/base.css">
 <script src="jquery.github.repos.min.js"></script>
 ```
 
 Call the plugin:
 
-```html
-<script>
-  $('.github-repos').githubRepos();
-</script>
+```javascript
+$('.github-repos').githubRepos();
 ```
 
 And that's it \o/
