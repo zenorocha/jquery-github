@@ -46,7 +46,9 @@ Prefer a non-jquery version with pure JavaScript? No problem, [@ricardobeat](htt
 
 ## History
 
-* v0.3 January 13, 2013
+* v0.2.2 January 15, 2013
+  * Added error message if API exceeds its limits
+* v0.2.1 January 13, 2013
   * Added live demo
   * Replaced single images for a sprite
   * Added minified version
