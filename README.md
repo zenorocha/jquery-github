@@ -7,7 +7,7 @@
 Use the `github-widget` class and create an attribute called `data-repo`:
 
 ```html
-<div class="github-widget" data-repo="jquery-boilerplate/boilerplate"></div>
+<div data-repo="jquery-boilerplate/boilerplate"></div>
 ```
 
 Include jQuery:
@@ -26,7 +26,7 @@ Include plugin's CSS and JS:
 Call the plugin:
 
 ```javascript
-$('.github-repos').githubRepos();
+$('[data-repo]').githubRepos();
 ```
 
 And that's it \o/
@@ -48,6 +48,7 @@ Prefer a non-jquery version with pure JavaScript? No problem, [@ricardobeat](htt
 ## History
 
 * v0.2.2 January 15, 2013
+  * Fixed "Last commit" date
   * Cached repo data using sessionStorage
   * Added error message if API exceeds its limits
 * v0.2.1 January 13, 2013

@@ -24,10 +24,10 @@
   </div>
 
   <div class="projects">
-    <div class="github-repos" data-repo="jquery-boilerplate/boilerplate"></div>
-    <div class="github-repos" data-repo="zenorocha/diveintohtml5"></div>
-    <div class="github-repos" data-repo="zenorocha/jquery-github-repos"></div>
-    <div class="github-repos" data-repo="zenorocha/hub.me"></div>
+    <div data-repo="jquery-boilerplate/boilerplate"></div>
+    <div data-repo="zenorocha/diveintohtml5"></div>
+    <div data-repo="zenorocha/jquery-github-repos"></div>
+    <div data-repo="zenorocha/hub.me"></div>
   </div>
 
   <p class="credits">Made with love by <a href="http://zenorocha.com">Zeno Rocha</a>.</p>
@@ -38,7 +38,7 @@
   <script src="../jquery.github.repos.min.js"></script>
 
   <script>
-    $('.github-repos').githubRepos();
+    $('[data-repo]').githubRepos();
   </script>
 
 </body>
