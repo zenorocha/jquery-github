@@ -4,7 +4,7 @@
 
 ## Usage
 
-Use the `github-widget` class and create an attribute called `data-repo`:
+Create an attribute called `data-repo`:
 
 ```html
 <div data-repo="jquery-boilerplate/boilerplate"></div>
