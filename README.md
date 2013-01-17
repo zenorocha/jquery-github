@@ -47,6 +47,8 @@ Prefer a non-jquery version with pure JavaScript? No problem, [@ricardobeat](htt
 
 ## History
 
+* v0.2.3 January 17, 2013
+  * Updated to jQuery v1.9
 * v0.2.2 January 15, 2013
   * Fixed "Last commit" date
   * Cached repo data using sessionStorage
