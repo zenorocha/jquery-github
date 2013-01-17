@@ -1,6 +1,6 @@
 # jQuery Github Repos
 
-[![Github Repo Demonstration](http://f.cl.ly/items/0J1y0o0D461A0T1v1328/Screen%20Shot%202013-01-13%20at%207.32.55%20PM.png)](http://zenorocha.github.com/jquery-github-repos/)
+[![Github Repo Demonstration](http://f.cl.ly/items/0J1y0o0D461A0T1v1328/Screen%20Shot%202013-01-13%20at%207.32.55%20PM.png)](http://zenorocha.github.com/jquery-github/)
 
 ## Usage
 
@@ -26,12 +26,12 @@ Include plugin's CSS and JS:
 Call the plugin:
 
 ```javascript
-$('[data-repo]').githubRepos();
+$('[data-repo]').github();
 ```
 
 And that's it \o/
 
-[Check the full example here](https://github.com/zenorocha/jquery-github-repos/blob/master/demo/index.html)
+[Check the full example here](https://github.com/zenorocha/jquery-github/blob/master/demo/index.html)
 
 ## Forks
 
@@ -62,6 +62,10 @@ Prefer a non-jquery version with pure JavaScript? No problem, [@ricardobeat](htt
   * Demonstration page created
 * v0.1 September 10, 2012
   * Initial commit
+
+## Credits
+
+Built on top of [jQuery Boilerplate](http://jqueryboilerplate.com)
 
 ## License
 

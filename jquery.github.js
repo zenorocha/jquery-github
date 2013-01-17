@@ -1,7 +1,7 @@
 /*
- *  jQuery Github Repos v0.2.2
+ *  jQuery Github v0.2.2
  *  A jQuery plugin to display your Github Repositories.
- *  http://git.io/3A1RMg
+ *  http://git.io/WUV4_Q
  *
  *  Zeno Rocha
  *  MIT License
@@ -21,7 +21,7 @@
     // minified (especially when both are regularly referenced in your plugin).
 
     // Create the defaults once
-    var pluginName = 'githubRepos',
+    var pluginName = 'github',
         document = window.document,
         defaults = {
             propertyName: "value"

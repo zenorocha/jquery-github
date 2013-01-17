@@ -25,10 +25,10 @@
       "url": "http://zenorocha.mit-license.org/"
     }
   ],
-  "bugs": "https://github.com/zenorocha/jquery-github-repos/issues",
-  "homepage": "https://github.com/zenorocha/jquery-github-repos/",
-  "docs": "https://github.com/zenorocha/jquery-github-repos#readme",
-  "download": "http://code.jquery.com/#github",
+  "bugs": "https://github.com/zenorocha/jquery-github/issues",
+  "homepage": "https://github.com/zenorocha/jquery-github/",
+  "docs": "https://github.com/zenorocha/jquery-github#readme",
+  "download": "https://github.com/zenorocha/jquery-github/archive/master.zip",
   "dependencies": {
     "jquery": ">=1.9"
   }
