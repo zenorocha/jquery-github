@@ -13,14 +13,14 @@ Create an attribute called `data-repo`:
 Include jQuery:
 
 ```html
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
 ```
 
 Include plugin's CSS and JS:
 
 ```html
 <link rel="stylesheet" href="assets/base.css">
-<script src="jquery.github.repos.min.js"></script>
+<script src="jquery.github.min.js"></script>
 ```
 
 Call the plugin:
@@ -47,7 +47,10 @@ Prefer a non-jquery version with pure JavaScript? No problem, [@ricardobeat](htt
 
 ## History
 
+* v0.2.4 January 17, 2013
+  * Renamed from `jquery-github-repos` to `jquery-github`
 * v0.2.3 January 17, 2013
+  * Added to jQuery Plugins Registry
   * Updated to jQuery v1.9
 * v0.2.2 January 15, 2013
   * Fixed "Last commit" date
