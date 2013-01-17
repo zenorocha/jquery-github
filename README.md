@@ -1,6 +1,6 @@
-# jQuery Github Repos
+# jQuery Github
 
-[![Github Repo Demonstration](http://f.cl.ly/items/0J1y0o0D461A0T1v1328/Screen%20Shot%202013-01-13%20at%207.32.55%20PM.png)](http://zenorocha.github.com/jquery-github/)
+[![Github Repo Demonstration](http://f.cl.ly/items/2I3u29002A1g2w1R1I0X/Screen%20Shot%202013-01-17%20at%202.16.36%20PM.png)](http://zenorocha.github.com/jquery-github/)
 
 ## Usage
 
