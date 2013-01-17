@@ -3,7 +3,7 @@
 <head>
 
   <meta charset="UTF-8">
-  <title>jQuery Github Repos</title>
+  <title>jQuery Github</title>
 
   <!-- Plugin CSS -->
   <link rel="stylesheet" href="js/assets/base.css">
@@ -14,19 +14,19 @@
 </head>
 <body>
 
-  <a href="https://github.com/zenorocha/jquery-github-repos">
+  <a href="https://github.com/zenorocha/jquery-github">
     <img class="github-ribbon" src="img/github-ribbon.png" alt="Fork me on GitHub">
   </a>
 
   <div class="title">
-    <h1>jQuery Github Repos</h1>
-    <p>A jQuery plugin to display your favorite Github Repositories.<br>For more informations, visit our <a href="https://github.com/zenorocha/jquery-github-repos">repository</a>.</p>
+    <h1>jQuery Github</h1>
+    <p>A jQuery plugin to display your favorite Github Repositories.<br>For more informations, visit our <a href="https://github.com/zenorocha/jquery-github">repository</a>.</p>
   </div>
 
   <div class="projects">
     <div data-repo="jquery-boilerplate/boilerplate"></div>
     <div data-repo="zenorocha/diveintohtml5"></div>
-    <div data-repo="zenorocha/jquery-github-repos"></div>
+    <div data-repo="zenorocha/jquery-github"></div>
     <div data-repo="zenorocha/hub.me"></div>
   </div>
 
@@ -34,11 +34,11 @@
 
   <img id="github-logo" src="img/github-cat.png" alt="Github Cat" />
 
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-  <script src="js/jquery.github.repos.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+  <script src="js/jquery.github.min.js"></script>
 
   <script>
-    $('[data-repo]').githubRepos();
+    $('[data-repo]').github();
   </script>
 
 </body>
