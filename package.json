@@ -1,8 +1,10 @@
 {
   "name": "jquery-github",
+  "name": "jQuery Github",
   "description": "A jQuery plugin to display your Github Repositories.",
   "author": "Zeno Rocha",
-  "version": "0.2.3",
+  "homepage": "https://github.com/zenorocha/jquery-github/",
+  "version": "0.2.5",
   "devDependencies": {
     "grunt": "~0.3.17"
   },

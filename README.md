@@ -47,6 +47,10 @@ Prefer a non-jquery version with pure JavaScript? No problem, [@ricardobeat](htt
 
 ## History
 
+* v0.2.5 March 01, 2013
+  * Added Grunt and integrated it with Travis
+  * Added lint task
+  * Added minify task
 * v0.2.4 January 17, 2013
   * Renamed from `jquery-github-repos` to `jquery-github`
 * v0.2.3 January 17, 2013
