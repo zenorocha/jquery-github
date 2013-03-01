@@ -1,3 +1,12 @@
+/*
+ *  jQuery Github - v0.2.4
+ *  A jQuery plugin to display your Github Repositories.
+ *  https://github.com/zenorocha/jquery-github/
+
+ *  Copyright (c) 2013
+ *  MIT License
+ */
+
 // the semi-colon before function invocation is a safety net against concatenated
 // scripts and/or other plugins which may not be closed properly.
 ;(function ( $, window, undefined ) {
