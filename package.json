@@ -1,6 +1,6 @@
 {
   "name": "jquery-github",
-  "name": "jQuery Github",
+  "title": "jQuery Github",
   "description": "A jQuery plugin to display your Github Repositories.",
   "author": "Zeno Rocha",
   "homepage": "https://github.com/zenorocha/jquery-github/",
