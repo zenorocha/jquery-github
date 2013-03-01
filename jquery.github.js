@@ -32,7 +32,6 @@
         this.element = element;
         this.$container = $(element);
         this.repo = this.$container.attr("data-repo");
-        this.cached;
 
         // jQuery has an extend method which merges the contents of two or
         // more objects, storing the result in the first object. The first object
@@ -56,7 +55,7 @@
         cached = sessionStorage.getItem('gh-repos:' + this.repo);
       }
 
-      if (cached != null) {
+      if (cached !== null) {
         self.applyTemplate(JSON.parse(cached));
       }
       else {
