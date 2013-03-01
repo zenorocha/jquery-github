@@ -1,9 +1,9 @@
 /*
- *  jQuery Github v0.2.2
+ *  jQuery Github - v0.2.5
  *  A jQuery plugin to display your Github Repositories.
- *  http://git.io/WUV4_Q
- *
- *  Zeno Rocha
+ *  https://github.com/zenorocha/jquery-github/
+
+ *  Copyright (c) 2013
  *  MIT License
  */
 
@@ -32,7 +32,6 @@
         this.element = element;
         this.$container = $(element);
         this.repo = this.$container.attr("data-repo");
-        this.cached;
 
         // jQuery has an extend method which merges the contents of two or
         // more objects, storing the result in the first object. The first object
@@ -56,7 +55,7 @@
         cached = sessionStorage.getItem('gh-repos:' + this.repo);
       }
 
-      if (cached != null) {
+      if (cached !== null) {
         self.applyTemplate(JSON.parse(cached));
       }
       else {
