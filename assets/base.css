@@ -1,15 +1,20 @@
 /* Github Box */
 
+.github-box-wrap {
+  display: inline-block;
+  width: 46%;
+  margin-right: 0.6em;
+  margin-left: 0.6em;
+  margin-bottom: 2em;
+}
+
 .github-box {
   font-family: "Helvetica Neue", Arial, sans-serif;
   background: #fafafa;
   border: 1px solid #ddd;
   color: #666;
   border-radius: 5px;
-  float: left;
-  margin-right: 1.2em;
-  margin-bottom: 2em;
-  width: 46%;
+  width: 100%;
 }
 
 .github-box a {
@@ -92,6 +97,10 @@
 
 .github-box .github-box-content p {
   margin: 0;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .github-box .github-box-content .repo-link {
@@ -153,4 +162,13 @@
   border-bottom-color: #9fc7db;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
+}
+
+/* breakpoint content-driven */
+@media all and (max-width: 678px) { 
+  .github-box-wrap {
+    display: block;
+    width: inherit;
+    margin-right: 0;
+  }
 }

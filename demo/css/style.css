@@ -23,18 +23,18 @@ h1 {
 }
 
 .title {
-  width: 700px;
+  width: 90%;
   margin: 0 auto;
-  padding-right: 35px;
 }
 
 .title p {
   text-align: center;
+  margin-bottom: 40px;
 }
 
 .credits {
   margin: 0 auto;
-  width: 700px;
+  width: 90%;
   text-align: center;
   clear: both;
 }
@@ -56,9 +56,8 @@ h1 {
 }
 
 .projects{
-  width: 700px;
+  width: 90%;
   margin: 0 auto;
-  padding: 30px;
 }
 
 /* Font-face */
