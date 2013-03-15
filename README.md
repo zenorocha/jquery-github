@@ -47,6 +47,8 @@ Prefer a non-jquery version with pure JavaScript? No problem, [@ricardobeat](htt
 
 ## History
 
+* v0.2.6 March 14, 2013
+	* Updated to responsive design
 * v0.2.5 March 01, 2013
   * Added Grunt and integrated it with Travis
   * Added lint task
