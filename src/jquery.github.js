@@ -1,4 +1,4 @@
-;(function ( $, window, undefined ) {
+;( function ( $, window, undefined ) {
     var pluginName = 'github',
         document   = window.document,
         defaults   = {
@@ -56,7 +56,7 @@
 
       // Cache data
       if (window.sessionStorage) {
-        sessionStorage.setItem('gh-repos:' + self.repo, JSON.stringify(result_data));
+        window.sessionStorage.setItem('gh-repos:' + self.repo, JSON.stringify(result_data));
       }
     };
 
@@ -68,7 +68,7 @@
       var self = this;
 
       if (window.sessionStorage) {
-        return sessionStorage.getItem('gh-repos:' + self.repo);
+        return window.sessionStorage.getItem('gh-repos:' + self.repo);
       }
       else {
         return false;
@@ -105,7 +105,7 @@
       var self = this,
           date = new Date(pushed_at);
 
-      return date.getDate() + '/' + (date.getMonth() + 1) + '/' + date.getFullYear()
+      return date.getDate() + '/' + (date.getMonth() + 1) + '/' + date.getFullYear();
     };
 
     /**
