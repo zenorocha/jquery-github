@@ -29,7 +29,7 @@ module.exports = function(grunt) {
 		},
 
 		// Minify definitions
-		min: {
+		uglify: {
 			dist: {
 				src: ['<banner:meta.banner>', '<config:concat.dist.dest>'],
 				dest: 'dist/jquery.github.min.js'
@@ -42,7 +42,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-jshint');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 
-	grunt.registerTask('default', ['jshint', 'min', 'concat']);
+	grunt.registerTask('default', ['jshint', 'uglify', 'concat']);
 	grunt.registerTask('travis', ['jshint']);
 
 };
