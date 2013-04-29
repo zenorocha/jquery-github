@@ -20,10 +20,7 @@
       self.init();
     }
 
-    /**
-     * Initializer
-     *
-     */
+    // Initializer
     Plugin.prototype.init = function () {
       var self   = this,
           cached = self.getCache();
@@ -36,10 +33,7 @@
       }
     };
 
-    /**
-     * Apply results to HTML template
-     *
-     */
+    // Apply results to HTML template
     Plugin.prototype.applyTemplate = function (repo) {
       var self     = this,
           $widget  = self.parseTemplate(repo);
@@ -47,10 +41,7 @@
       $widget.appendTo(self.$container);
     };
 
-    /**
-     * Stores repostories in sessionStorage if available
-     *
-     */
+    // Stores repostories in sessionStorage if available
     Plugin.prototype.cacheResults = function (result_data) {
       var self = this;
 
@@ -60,10 +51,7 @@
       }
     };
 
-    /**
-     * Grab cached results
-     *
-     */
+    // Grab cached results
     Plugin.prototype.getCache = function () {
       var self = this;
 
@@ -75,10 +63,7 @@
       }
     };
 
-    /**
-     * Handle Errors requests
-     *
-     */
+    // Handle Errors requests
     Plugin.prototype.handlerErrorRequests = function (result_data) {
       var self = this;
 
@@ -86,10 +71,7 @@
       return;
     };
 
-    /**
-     * Handle Successful request
-     *
-     */
+    // Handle Successful request
     Plugin.prototype.handlerSuccessfulRequest = function (result_data) {
       var self = this;
 
@@ -97,10 +79,7 @@
       self.cacheResults(result_data);
     };
 
-    /**
-     * Parses Pushed date with date format
-     *
-     */
+    // Parses Pushed date with date format
     Plugin.prototype.parsePushedDate = function (pushed_at) {
       var self = this,
           date = new Date(pushed_at);
@@ -108,20 +87,14 @@
       return date.getDate() + '/' + (date.getMonth() + 1) + '/' + date.getFullYear();
     };
 
-    /**
-     * Parses repository URL to be friendly
-     *
-     */
+    // Parses repository URL to be friendly
     Plugin.prototype.parseRepositoryURL = function (url) {
       var self = this;
 
       return url.replace('api.','').replace('repos/','');
     };
 
-    /**
-     * Parses HTML template
-     *
-     */
+    // Parses HTML template
     Plugin.prototype.parseTemplate = function (repo) {
       var self      = this,
           pushed_at = self.parsePushedDate(repo.pushed_at),
@@ -149,10 +122,7 @@
       '));
     };
 
-    /**
-     * Request repositories from Github
-     *
-     */
+    // Request repositories from Github
     Plugin.prototype.requestData = function (repo) {
       var self = this;
 
