@@ -1,6 +1,6 @@
 ;( function ( $, window, undefined ) {
 
-	var pluginName = 'github',
+	var pluginName = "github",
 			document   = window.document,
 			defaults   = {
 				propertyName: "value"
@@ -48,7 +48,7 @@
 
 		// Cache data
 		if (window.sessionStorage) {
-			window.sessionStorage.setItem('gh-repos:' + self.repo, JSON.stringify(result_data));
+			window.sessionStorage.setItem("gh-repos:" + self.repo, JSON.stringify(result_data));
 		}
 	};
 
@@ -57,7 +57,7 @@
 		var self = this;
 
 		if (window.sessionStorage) {
-			return window.sessionStorage.getItem('gh-repos:' + self.repo);
+			return window.sessionStorage.getItem("gh-repos:" + self.repo);
 		}
 		else {
 			return false;
@@ -85,14 +85,14 @@
 		var self = this,
 				date = new Date(pushed_at);
 
-		return date.getDate() + '/' + (date.getMonth() + 1) + '/' + date.getFullYear();
+		return date.getDate() + "/" + (date.getMonth() + 1) + "/" + date.getFullYear();
 	};
 
 	// Parses repository URL to be friendly
 	Plugin.prototype.parseRepositoryURL = function (url) {
 		var self = this;
 
-		return url.replace('api.','').replace('repos/','');
+		return url.replace("api.","").replace("repos/","");
 	};
 
 	// Parses HTML template
@@ -101,26 +101,26 @@
 				pushed_at = self.parsePushedDate(repo.pushed_at),
 				repo_url  = self.parseRepositoryURL(repo.url);
 
-		return $($.parseHTML(' \
-			<div class="github-box">  \
-				<div class="github-box-header"> \
+		return $($.parseHTML(" \
+			<div class='github-box'>  \
+				<div class='github-box-header'> \
 					<h3> \
-						<a href="' + repo_url + '">' + repo.name + '</a> \
+						<a href='" + repo_url + "'>'" + repo.name + "'</a> \
 					</h3> \
-					<div class="github-stats"> \
-						<a class="repo-watchers" href="' + repo_url + '/watchers">' + repo.watchers + '</a> \
-						<a class="repo-forks" href="' + repo_url + '/forks">' + repo.forks + '</a> \
+					<div class='github-stats'> \
+						<a class='repo-watchers' href='" + repo_url + "'/watchers'>'" + repo.watchers + "'</a> \
+						<a class='repo-forks' href='" + repo_url + "'/forks'>'" + repo.forks + "'</a> \
 					</div> \
 				</div> \
-				<div class="github-box-content"> \
-					<p>' + repo.description + ' &mdash; <a href="' + repo_url + '#readme">Read More</a></p> \
+				<div class='github-box-content'> \
+					<p>'" + repo.description + "' &mdash; <a href='" + repo_url + "'#readme'>Read More</a></p> \
 				</div> \
-				<div class="github-box-download"> \
-					<p class="repo-update">Latest commit to <strong>master</strong> on ' + pushed_at + '</p> \
-					<a class="repo-download" href="' + repo_url + '/zipball/master">Download as zip</a> \
+				<div class='github-box-download'> \
+					<p class='repo-update'>Latest commit to <strong>master</strong> on '" + pushed_at + "'</p> \
+					<a class='repo-download' href='" + repo_url + "'/zipball/master'>Download as zip</a> \
 				</div> \
 			</div> \
-		  '));
+		  "));
 	};
 
 	// Request repositories from Github
@@ -128,10 +128,10 @@
 		var self = this;
 
 		$.ajax({
-			url: 'https://api.github.com/repos/' + repo,
-			dataType: 'jsonp',
+			url: "https://api.github.com/repos/" + repo,
+			dataType: "jsonp",
 			success: function(results) {
-		  		var result_data = results.data;
+				var result_data = results.data;
 
 				// Handle API failures
 				if (results.meta.status >= 400 && result_data.message) {
@@ -146,8 +146,8 @@
 
 	$.fn[pluginName] = function ( options ) {
 		return this.each(function () {
-			if (!$.data(this, 'plugin_' + pluginName)) {
-				$.data(this, 'plugin_' + pluginName, new Plugin( this, options ));
+			if (!$.data(this, "plugin_" + pluginName)) {
+				$.data(this, "plugin_" + pluginName, new Plugin( this, options ));
 			}
 		});
 	};
