@@ -45,6 +45,8 @@ Prefer a non-jquery version with pure JavaScript? No problem, [@ricardobeat](htt
 4. Push to the branch: `git push origin my-new-feature`
 5. Submit a pull request :D
 
+Also remember to follow [jQuery's Code Style](http://contribute.jquery.org/style-guide/js/).
+
 ## History
 
 * v0.2.7 April 29, 2013

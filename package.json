@@ -1,14 +1,14 @@
 {
-  "name": "jquery-github",
-  "title": "jQuery Github",
-  "description": "A jQuery plugin to display your Github Repositories.",
-  "author": "Zeno Rocha",
-  "homepage": "https://github.com/zenorocha/jquery-github/",
-  "version": "0.2.5",
-  "devDependencies": {
-    "grunt": "~0.3.17"
-  },
-  "scripts": {
-    "test": "grunt travis --verbose"
-  }
+	"name": "jquery-github",
+	"title": "jQuery Github",
+	"description": "A jQuery plugin to display your Github Repositories.",
+	"author": "Zeno Rocha",
+	"homepage": "https://github.com/zenorocha/jquery-github/",
+	"version": "0.2.5",
+	"devDependencies": {
+		"grunt": "~0.3.17"
+	},
+	"scripts": {
+		"test": "grunt travis --verbose"
+	}
 }
