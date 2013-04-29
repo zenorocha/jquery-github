@@ -10,7 +10,8 @@
 	"quotmark": "double",
 	"smarttabs": true,
 	"trailing": true,
-	"undef": true,
-	"unused": true,
-	"node": true
+	"undef": false,
+	"unused": false,
+	"node": true,
+	"multistr": true
 }
