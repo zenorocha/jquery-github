@@ -4,7 +4,7 @@
 	"description": "A jQuery plugin to display your Github Repositories.",
 	"author": "Zeno Rocha",
 	"homepage": "https://github.com/zenorocha/jquery-github/",
-	"version": "0.2.7",
+	"version": "0.2.8",
 	"devDependencies": {
     "grunt": "~0.4.1",
     "grunt-cli": "~0.1.7",

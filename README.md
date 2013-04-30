@@ -49,9 +49,10 @@ Also remember to follow [jQuery's Code Style](http://contribute.jquery.org/style
 
 ## History
 
+* v0.2.8 April 30, 2013
+	* Follow jQuery's core style guide
 * v0.2.7 April 29, 2013
 	* Code refactoring
-	* Follow jQuery's core style guide
 	* Upgrade Grunt from v0.3 to v0.4
 * v0.2.6 March 14, 2013
 	* Updated to responsive design
