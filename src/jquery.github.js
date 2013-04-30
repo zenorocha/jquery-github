@@ -30,7 +30,7 @@
 			self.applyTemplate(JSON.parse(cached));
 		}
 		else {
-			self.requestData(repo);
+			self.requestData(self.repo);
 		}
 	};
 
