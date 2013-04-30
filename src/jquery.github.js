@@ -105,18 +105,18 @@
 			<div class='github-box'>  \
 				<div class='github-box-header'> \
 					<h3> \
-						<a href='" + repo_url + "'>'" + repo.name + "'</a> \
+						<a href='" + repo_url + "'>" + repo.name + "</a> \
 					</h3> \
 					<div class='github-stats'> \
-						<a class='repo-watchers' href='" + repo_url + "'/watchers'>'" + repo.watchers + "'</a> \
-						<a class='repo-forks' href='" + repo_url + "'/forks'>'" + repo.forks + "'</a> \
+						<a class='repo-watchers' href='" + repo_url + "'/watchers'>" + repo.watchers + "</a> \
+						<a class='repo-forks' href='" + repo_url + "'/forks'>" + repo.forks + "</a> \
 					</div> \
 				</div> \
 				<div class='github-box-content'> \
-					<p>'" + repo.description + "' &mdash; <a href='" + repo_url + "'#readme'>Read More</a></p> \
+					<p>" + repo.description + " &mdash; <a href='" + repo_url + "'#readme'>Read More</a></p> \
 				</div> \
 				<div class='github-box-download'> \
-					<p class='repo-update'>Latest commit to <strong>master</strong> on '" + pushed_at + "'</p> \
+					<p class='repo-update'>Latest commit to <strong>master</strong> on " + pushed_at + "</p> \
 					<a class='repo-download' href='" + repo_url + "'/zipball/master'>Download as zip</a> \
 				</div> \
 			</div> \
