@@ -3,19 +3,23 @@ module.exports = function(grunt) {
 	grunt.initConfig({
 
 		// Meta informations
-		pkg: '<json:package.json>',
+		pkg: grunt.file.readJSON('package.json'),
 		meta: {
 			banner: '/*\n' +
 				' *  <%= pkg.title || pkg.name %> - v<%= pkg.version %>\n' +
 				' *  <%= pkg.description %>\n' +
-				' *  <%= pkg.homepage %>\n\n' +
+				' *  <%= pkg.homepage %>\n' +
+				' *\n' +
 				' *  Copyright (c) <%= grunt.template.today("yyyy") %>\n' +
 				' *  MIT License\n' +
-				' */'
-			},
+				' */\n'
+		},
 		concat: {
+			options: {
+				banner: '<%= meta.banner %>'
+			},
 			dist: {
-				src: ['<banner:meta.banner>', '<file_strip_banner:src/jquery.github.js>'],
+				src: ['src/jquery.github.js'],
 				dest: 'dist/jquery.github.js'
 			}
 		},
@@ -30,8 +34,11 @@ module.exports = function(grunt) {
 
 		// Minify definitions
 		uglify: {
-			dist: {
-				src: ['<banner:meta.banner>', '<config:concat.dist.dest>'],
+			options: {
+				banner: '<%= meta.banner %>'
+			},
+			my_target: {
+				src: ['dist/jquery.github.js'],
 				dest: 'dist/jquery.github.min.js'
 			}
 		}
@@ -42,7 +49,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-jshint');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 
-	grunt.registerTask('default', ['jshint', 'uglify', 'concat']);
+	grunt.registerTask('default', ['jshint', 'concat', 'uglify']);
 	grunt.registerTask('travis', ['jshint']);
 
 };
