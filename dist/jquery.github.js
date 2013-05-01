@@ -125,7 +125,7 @@
 				</div> \
 				<div class='github-box-download'> \
 					<p class='repo-update'>Latest commit to <strong>master</strong> on " + pushed_at + "</p> \
-					<a class='repo-download' href='" + repo_url + "'/zipball/master'>Download as zip</a> \
+					<a class='repo-download' href='" + repo_url + "/zipball/master'>Download as zip</a> \
 				</div> \
 			</div> \
 		  ") );
