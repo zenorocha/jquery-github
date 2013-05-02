@@ -38,13 +38,15 @@ And that's it \o/
 * [zenorocha.com/projects](http://zenorocha.com/projects/)
 * [anasnakawa.com/projects](http://anasnakawa.com/projects/)
 
-Have you used this plugin in your project? 
+**Have you used this plugin in your project?**
 
-Let me know! Send a [tweet](http://twitter.com/zenorocha) or [pull request](https://github.com/zenorocha/jquery-github/pull/new/master) :)
+Let me know! Send a [tweet](http://twitter.com/zenorocha) or [pull request](https://github.com/zenorocha/jquery-github/pull/new/master) and I'll add it here :)
 
 ## Forks
 
-Prefer a non-jquery version with pure JavaScript? No problem, [@ricardobeat](https://github.com/ricardobeat) already did one :) Check [his fork!](https://github.com/ricardobeat/github-repos)
+**Prefer a non-jquery version with pure JavaScript?**
+
+No problem, [@ricardobeat](https://github.com/ricardobeat) already did one. Check [his fork!](https://github.com/ricardobeat/github-repos)
 
 ## Contributing
 
