@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+
+  <meta charset="UTF-8">
+  <title>jQuery Github with Zepto</title>
+
+  <!-- Plugin CSS -->
+  <link rel="stylesheet" href="../assets/base.css">
+
+  <!-- Demo CSS -->
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+  <a href="https://github.com/zenorocha/jquery-github">
+    <img class="github-ribbon" src="img/github-ribbon.png" alt="Fork me on GitHub">
+  </a>
+
+  <div class="title">
+    <h1>jQuery Github</h1>
+    <p>A jQuery plugin to display your favorite Github Repositories.<br>For more informations, visit our <a href="https://github.com/zenorocha/jquery-github">repository</a>.</p>
+  </div>
+
+  <div class="projects">
+    <div data-repo="jquery-boilerplate/boilerplate"></div>
+    <div data-repo="zenorocha/diveintohtml5"></div>
+    <div data-repo="zenorocha/jquery-github"></div>
+    <div data-repo="zenorocha/hub.me"></div>
+  </div>
+
+  <p class="credits">Made with love by <a href="http://zenorocha.com">Zeno Rocha</a>.</p>
+
+  <img id="github-logo" src="img/github-cat.png" alt="Github Cat" />
+
+  <script src="http://zeptojs.com/zepto.min.js"></script>
+  <script type="text/javascript" src="https://raw.github.com/madrobby/zepto/master/src/data.js"></script>
+  <script src="../jquery.github.js"></script>
+
+  <script>
+    $('[data-repo]').github();
+  </script>
+
+</body>
+</html>
