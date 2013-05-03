@@ -129,27 +129,26 @@
 				pushed_at = self.parsePushedDate( repo.pushed_at ),
 				repo_url  = self.parseRepositoryURL( repo.url );
 
-		return $( $.parseHTML(" \
-			<div class='github-box'>  \
-				<div class='github-box-header'> \
-					<h3> \
-						<a href='" + repo_url + "'>" + repo.name + "</a> \
-					</h3> \
-					<div class='github-stats'> \
-						<a class='repo-stars' title='Stars' data-icon='7' href='" + repo_url + "/watchers'>" + repo.watchers + "</a> \
-						<a class='repo-forks' title='Forks' data-icon='f' href='" + repo_url + "/network'>" + repo.forks + "</a> \
-						<a class='repo-issues' title='Issues' data-icon='i' href='" + repo_url + "/issues'>" + repo.open_issues + "</a> \
-					</div> \
-				</div> \
-				<div class='github-box-content'> \
-					<p>" + repo.description + " &mdash; <a href='" + repo_url + "#readme'>Read More</a></p> \
-				</div> \
-				<div class='github-box-download'> \
-					<p class='repo-update'>Latest commit to <strong>master</strong> on " + pushed_at + "</p> \
-					<a class='repo-download' title='Download as zip' data-icon='w' href='" + repo_url + "/zipball/master'></a> \
-				</div> \
-			</div> \
-		  ") );
+		return $(
+			"<div class='github-box'>" +
+				"<div class='github-box-header'>" +
+					"<h3>" +
+						"<a href='" + repo_url + "'>" + repo.name + "</a>" +
+					"</h3>" +
+					"<div class='github-stats'>" +
+						"<a class='repo-stars' title='Stars' data-icon='7' href='" + repo_url + "/watchers'>" + repo.watchers + "</a>" +
+						"<a class='repo-forks' title='Forks' data-icon='f' href='" + repo_url + "/network'>" + repo.forks + "</a>" +
+						"<a class='repo-issues' title='Issues' data-icon='i' href='" + repo_url + "/issues'>" + repo.open_issues + "</a>" +
+					"</div>" +
+				"</div>" +
+				"<div class='github-box-content'>" +
+					"<p>" + repo.description + " &mdash; <a href='" + repo_url + "#readme'>Read More</a></p>" +
+				"</div>" +
+				"<div class='github-box-download'>" +
+					"<p class='repo-update'>Latest commit to <strong>master</strong> on " + pushed_at + "</p>" +
+					"<a class='repo-download' title='Download as zip' data-icon='w' href='" + repo_url + "/zipball/master'></a>" +
+				"</div>" +
+			"</div>");
 	};
 
 	// Request repositories from Github
@@ -173,12 +172,12 @@
 		});
 	};
 
-	$.fn[ pluginName ] = function ( options ) {
+	$.fn[pluginName] = function ( options ) {
 		return this.each(function () {
-			if ( !$.data( this, "plugin_" + pluginName ) ) {
-				$.data( this, "plugin_" + pluginName, new Plugin( this, options ) );
+			if ( !$( this ).data( "plugin_" + pluginName ) ) {
+				$( this ).data( "plugin_" + pluginName, new Plugin( this, options ) );
 			}
 		});
 	};
 
-}( jQuery, window ) );
+}( window.jQuery || window.Zepto, window ));
