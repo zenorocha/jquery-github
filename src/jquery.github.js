@@ -3,7 +3,9 @@
 	var pluginName = "github",
 			document   = window.document,
 			defaults   = {
-				propertyName: "value"
+				iconStars:  true,
+				iconForks:  true,
+				iconIssues: false
 			};
 
 	function Plugin( element, options ) {
@@ -19,6 +21,7 @@
 		self._name     = pluginName;
 
 		self.init();
+		self.displayIcons();
 	}
 
 	// Initializer
@@ -31,6 +34,31 @@
 		}
 		else {
 			self.requestData( self.repo );
+		}
+	};
+
+	// Display or hide icons
+	Plugin.prototype.displayIcons = function () {
+		$iconStars = $( ".repo-stars" );
+		$iconForks = $( ".repo-forks" );
+		$iconIssues = $( ".repo-issues" );
+
+		if ( this.options.iconStars ) {
+			$iconStars.css( "display", "inline-block" );
+		} else {
+			$iconStars.css( "display", "none" );
+		}
+
+		if ( this.options.iconForks ) {
+			$iconForks.css( "display", "inline-block" );
+		} else {
+			$iconForks.css( "display", "none" );
+		}
+
+		if ( this.options.iconIssues ) {
+			$iconIssues.css( "display", "inline-block" );
+		} else {
+			$iconIssues.css( "display", "none" );
 		}
 	};
 
@@ -110,6 +138,7 @@
 					<div class='github-stats'> \
 						<a class='repo-stars' title='Stars' data-icon='7' href='" + repo_url + "/watchers'>" + repo.watchers + "</a> \
 						<a class='repo-forks' title='Forks' data-icon='f' href='" + repo_url + "/network'>" + repo.forks + "</a> \
+						<a class='repo-issues' title='Issues' data-icon='i' href='" + repo_url + "/issues'>" + repo.open_issues + "</a> \
 					</div> \
 				</div> \
 				<div class='github-box-content'> \

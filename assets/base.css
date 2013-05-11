@@ -93,6 +93,7 @@
 
 .github-box .github-box-header .github-stats .repo-forks {
 	padding-left: 2px;
+	border-right: 1px solid #ddd;
 }
 
 /* Github Box Content */
