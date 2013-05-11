@@ -108,8 +108,8 @@
 						<a href='" + repo_url + "'>" + repo.name + "</a> \
 					</h3> \
 					<div class='github-stats'> \
-						<a class='repo-watchers' href='" + repo_url + "/watchers'>" + repo.watchers + "</a> \
-						<a class='repo-forks' href='" + repo_url + "/network'>" + repo.forks + "</a> \
+						<a class='repo-stars' title='Stars' data-icon='7' href='" + repo_url + "/watchers'>" + repo.watchers + "</a> \
+						<a class='repo-forks' title='Forks' data-icon='f' href='" + repo_url + "/network'>" + repo.forks + "</a> \
 					</div> \
 				</div> \
 				<div class='github-box-content'> \
@@ -117,7 +117,7 @@
 				</div> \
 				<div class='github-box-download'> \
 					<p class='repo-update'>Latest commit to <strong>master</strong> on " + pushed_at + "</p> \
-					<a class='repo-download' href='" + repo_url + "/zipball/master'>Download as zip</a> \
+					<a class='repo-download' title='Download as zip' data-icon='w' href='" + repo_url + "/zipball/master'></a> \
 				</div> \
 			</div> \
 		  ") );

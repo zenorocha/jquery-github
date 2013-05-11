@@ -50,6 +50,7 @@
 /* Github Box Header - Stats */
 
 .github-box .github-box-header .github-stats {
+	line-height: 36px;
 	position: absolute;
 	top: 10px;
 	right: 10px;
@@ -66,10 +67,10 @@
 	display: inline-block;
 	height: 21px;
 	color: #666;
-	padding: 0 5px 0 18px;
-	background: url('btn-sprite.png') no-repeat;
+	padding: 0 5px 0 5px;
 	filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
 	opacity: 0.7;
+	vertical-align: top;
 }
 
 .github-box .github-box-header .github-stats a:hover {
@@ -77,14 +78,21 @@
 	opacity: 1;
 }
 
-.github-box .github-box-header .github-stats .repo-watchers {
+.github-box .github-box-header .github-stats a:before {
+	font-family: 'EntypoRegular';
+	content: attr(data-icon);
+	display: inline-block;
+	speak: none;
+	padding-right: 2px;
+	font-size: 2em;
+}
+
+.github-box .github-box-header .github-stats .repo-stars {
 	border-right: 1px solid #ddd;
-	background-position: 3px 4px;
 }
 
 .github-box .github-box-header .github-stats .repo-forks {
-	background-position: 2px -14px;
-	padding-left: 15px;
+	padding-left: 2px;
 }
 
 /* Github Box Content */
@@ -147,13 +155,12 @@
 	border-bottom-color: #bbb;
 	border-radius: 3px;
 	display: block;
-	text-indent: -9999px;
 	width: 24px;
 	padding: 0;
-	background: url('btn-sprite.png') no-repeat 4px -31px,-webkit-linear-gradient(whiteSmoke, #E5E5E5);
-	background: url('btn-sprite.png') no-repeat 4px -31px,-moz-linear-gradient(#f1f7fa, #dbeaf1);
+	background: -webkit-linear-gradient(whiteSmoke, #E5E5E5);
+	background: -moz-linear-gradient(#f1f7fa, #dbeaf1);
 	filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
-	opacity: 0.7;
+	opacity: 1;
 }
 
 .github-box .github-box-download .repo-download:hover {
@@ -164,6 +171,16 @@
 	opacity: 1;
 }
 
+.github-box .github-box-download .repo-download:before {
+	font-family: 'EntypoRegular';
+	text-indent: 0px;
+	content: attr(data-icon);
+	display: inline-block;
+	speak: none;
+	font-size: 2.0em;
+	padding: 0 6px;
+}
+
 /* Breakpoint content-driven */
 
 @media all and (max-width: 678px) {
@@ -172,4 +189,17 @@
 		width: inherit;
 		margin-right: 0;
 	}
+}
+
+/* Fonts */
+
+@font-face {
+	font-family: 'EntypoRegular';
+	src: url('Entypo-webfont.eot');
+	src: url('Entypo-webfont.eot?#iefix') format('embedded-opentype'),
+			 url('Entypo-webfont.woff') format('woff'),
+			 url('Entypo-webfont.ttf') format('truetype'),
+			 url('Entypo-webfont.svg#EntypoRegular') format('svg');
+	font-weight: normal;
+	font-style: normal;
 }
