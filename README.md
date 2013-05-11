@@ -63,6 +63,88 @@ Display the number of forks in a repository.
 
 Display the number of issues in a repository.
 
+## Structure
+
+The basic structure of the project is given in the following way:
+
+```
+.
+|-- assets/
+|-- demo/
+|   |-- index.html
+|-- dist/
+|   |-- jquery.boilerplate.js
+|   |-- jquery.boilerplate.min.js
+|-- src/
+|   |-- jquery.boilerplate.coffee
+|   |-- jquery.boilerplate.js
+|-- .editorconfig
+|-- .gitignore
+|-- .jshintrc
+|-- .travis.yml
+|-- github.jquery.json
+|-- Gruntfile.js
+`-- package.json
+```
+
+#### [assets/](https://github.com/zenorocha/jquery-github/tree/master/assets)
+
+Contains CSS and Font files to create that lovely Github box.
+
+#### [demo/](https://github.com/zenorocha/jquery-github/tree/master/demo)
+
+Contains a simple HTML file to demonstrate the plugin.
+
+#### [dist/](https://github.com/zenorocha/jquery-github/tree/master/dist)
+
+This is where the generated files are stored once Grunt runs JSHint and other stuff.
+
+#### [src/](https://github.com/zenorocha/jquery-github/tree/master/src)
+
+Contains the files responsible for the plugin.
+
+#### [.editorconfig](https://github.com/zenorocha/jquery-github/tree/master/.editorconfig)
+
+This file is for unifying the coding style for different editors and IDEs.
+
+> Check [editorconfig.org](http://editorconfig.org) if you haven't heard about this project yet.
+
+#### [.gitignore](https://github.com/zenorocha/jquery-github/tree/master/.gitignore)
+
+List of files that we don't want Git to track.
+
+> Check this [Git Ignoring Files Guide](https://help.github.com/articles/ignoring-files) for more details.
+
+#### [.jshintrc](https://github.com/zenorocha/jquery-github/tree/master/.jshintrc)
+
+List of rules used by JSHint to detect errors and potential problems in JavaScript.
+
+> Check [jshint.com](http://jshint.com/about/) if you haven't heard about this project yet.
+
+#### [.travis.yml](https://github.com/zenorocha/jquery-github/tree/master/.travis.yml)
+
+Definitions for continous integration using Travis.
+
+> Check [travis-ci.org](http://about.travis-ci.org/) if you haven't heard about this project yet.
+
+#### [github.jquery.json](https://github.com/zenorocha/jquery-github/tree/master/github.jquery.json)
+
+Package manifest file used to publish plugins in jQuery Plugin Registry.
+
+> Check this [Package Manifest Guide](http://plugins.jquery.com/docs/package-manifest/) for more details.
+
+#### [Gruntfile.js](https://github.com/zenorocha/jquery-github/tree/master/Gruntfile.js)
+
+Contains all automated tasks using Grunt.
+
+> Check [gruntjs.com](http://gruntjs.com) if you haven't heard about this project yet.
+
+#### [package.json](https://github.com/zenorocha/jquery-github/tree/master/package.json)
+
+Specify all dependencies loaded via Node.JS.
+
+> Check [NPM](https://npmjs.org/doc/json.html) for more details.
+
 ## Showcase
 
 * [zenorocha.com/projects](http://zenorocha.com/projects/)
@@ -80,11 +162,11 @@ No problem, [@ricardobeat](https://github.com/ricardobeat) already did one. Chec
 
 ## Contributing
 
-Check [CONTRIBUTING.md](https://github.com/zenorocha/jquery-github/blob/master/CONTRIBUTING.md).
+Check [CONTRIBUTING.md](https://github.com/zenorocha/jquery-github/blob/master/CONTRIBUTING.md)
 
 ## History
 
-Check [HISTORY.md](https://github.com/zenorocha/jquery-github/blob/master/HISTORY.md).
+Check [HISTORY.md](https://github.com/zenorocha/jquery-github/blob/master/HISTORY.md)
 
 ## Credits
 
