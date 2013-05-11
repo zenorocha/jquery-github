@@ -1,5 +1,5 @@
 /*
- *  jQuery Github - v0.2.9
+ *  jQuery Github - v0.3.0
  *  A jQuery plugin to display your Github Repositories.
  *  https://github.com/zenorocha/jquery-github/
  *
@@ -11,7 +11,9 @@
 	var pluginName = "github",
 			document   = window.document,
 			defaults   = {
-				propertyName: "value"
+				iconStars:  true,
+				iconForks:  true,
+				iconIssues: false
 			};
 
 	function Plugin( element, options ) {
@@ -27,6 +29,7 @@
 		self._name     = pluginName;
 
 		self.init();
+		self.displayIcons();
 	}
 
 	// Initializer
@@ -39,6 +42,31 @@
 		}
 		else {
 			self.requestData( self.repo );
+		}
+	};
+
+	// Display or hide icons
+	Plugin.prototype.displayIcons = function () {
+		$iconStars = $( ".repo-stars" );
+		$iconForks = $( ".repo-forks" );
+		$iconIssues = $( ".repo-issues" );
+
+		if ( this.options.iconStars ) {
+			$iconStars.css( "display", "inline-block" );
+		} else {
+			$iconStars.css( "display", "none" );
+		}
+
+		if ( this.options.iconForks ) {
+			$iconForks.css( "display", "inline-block" );
+		} else {
+			$iconForks.css( "display", "none" );
+		}
+
+		if ( this.options.iconIssues ) {
+			$iconIssues.css( "display", "inline-block" );
+		} else {
+			$iconIssues.css( "display", "none" );
 		}
 	};
 
@@ -116,8 +144,9 @@
 						<a href='" + repo_url + "'>" + repo.name + "</a> \
 					</h3> \
 					<div class='github-stats'> \
-						<a class='repo-watchers' href='" + repo_url + "/watchers'>" + repo.watchers + "</a> \
-						<a class='repo-forks' href='" + repo_url + "/network'>" + repo.forks + "</a> \
+						<a class='repo-stars' title='Stars' data-icon='7' href='" + repo_url + "/watchers'>" + repo.watchers + "</a> \
+						<a class='repo-forks' title='Forks' data-icon='f' href='" + repo_url + "/network'>" + repo.forks + "</a> \
+						<a class='repo-issues' title='Issues' data-icon='i' href='" + repo_url + "/issues'>" + repo.open_issues + "</a> \
 					</div> \
 				</div> \
 				<div class='github-box-content'> \
@@ -125,7 +154,7 @@
 				</div> \
 				<div class='github-box-download'> \
 					<p class='repo-update'>Latest commit to <strong>master</strong> on " + pushed_at + "</p> \
-					<a class='repo-download' href='" + repo_url + "/zipball/master'>Download as zip</a> \
+					<a class='repo-download' title='Download as zip' data-icon='w' href='" + repo_url + "/zipball/master'></a> \
 				</div> \
 			</div> \
 		  ") );

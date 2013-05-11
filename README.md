@@ -26,12 +26,42 @@ Include plugin's CSS and JS:
 Call the plugin:
 
 ```javascript
-$('[data-repo]').github();
+$("[data-repo]").github();
 ```
 
 And that's it \o/
 
 [Check full example's source code](https://github.com/zenorocha/jquery-github/blob/master/demo/index.html).
+
+## Options
+
+Here's a list of available settings.
+
+```javascript
+$("[data-repo]").github({
+	iconStars:  true,
+	iconForks:  true,
+	iconIssues: false
+});
+```
+
+#### iconStars
+
+*Type: `Boolean` Default: `true`*
+
+Display the number of stars in a repository.
+
+#### iconForks
+
+*Type: `Boolean` Default: `true`*
+
+Display the number of forks in a repository.
+
+#### iconIssues
+
+*Type: `Boolean` Default: `false`*
+
+Display the number of issues in a repository.
 
 ## Showcase
 
@@ -60,6 +90,13 @@ Also remember to follow [jQuery's Code Style](http://contribute.jquery.org/style
 
 ## History
 
+* v0.3.0 May 11, 2013
+	* Added options to display or hide icons
+	* Displayed the number of issues
+	* Added Grunt Watch task
+	* Added title on attribute on icons
+	* Switched from 'watch' icon to 'star' icon
+	* Used font icons instead of images
 * v0.2.9 May 1, 2013
 	* Fixed urls
 * v0.2.8 April 30, 2013
