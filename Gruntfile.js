@@ -41,13 +41,21 @@ module.exports = function(grunt) {
 				src: ['dist/jquery.github.js'],
 				dest: 'dist/jquery.github.min.js'
 			}
-		}
+		},
+
+		// Run JSHint, concat, minify and send it to the dist folder
+		// any time a file is added, changed or deleted
+		watch: {
+			files: ['**/*'],
+			tasks: ['jshint', 'concat', 'uglify'],
+		},
 
 	});
 
 	grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-contrib-jshint');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
+	grunt.loadNpmTasks('grunt-contrib-watch');
 
 	grunt.registerTask('default', ['jshint', 'concat', 'uglify']);
 	grunt.registerTask('travis', ['jshint']);
