@@ -1,5 +1,7 @@
 # History
 
+* v0.3.1 May 11, 2013
+	* Added compatibility with Zepto
 * v0.3.0 May 11, 2013
 	* Added options to display or hide icons
 	* Displayed the number of issues
