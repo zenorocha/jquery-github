@@ -72,9 +72,11 @@ The basic structure of the project is given in the following way:
 |-- assets/
 |-- demo/
 |   |-- index.html
+|   |-- index-zepto.html
 |-- dist/
 |   |-- jquery.boilerplate.js
 |   |-- jquery.boilerplate.min.js
+|-- lib/
 |-- src/
 |   |-- jquery.boilerplate.coffee
 |   |-- jquery.boilerplate.js
@@ -98,6 +100,10 @@ Contains a simple HTML file to demonstrate the plugin.
 #### [dist/](https://github.com/zenorocha/jquery-github/tree/master/dist)
 
 This is where the generated files are stored once Grunt runs JSHint and other stuff.
+
+#### [lib/](https://github.com/zenorocha/jquery-github/tree/master/lib)
+
+Contains libraries like jQuery and Zepto.
 
 #### [src/](https://github.com/zenorocha/jquery-github/tree/master/src)
 
@@ -154,11 +160,15 @@ Specify all dependencies loaded via Node.JS.
 
 Let me know! Send a [tweet](http://twitter.com/zenorocha) or [pull request](https://github.com/zenorocha/jquery-github/pull/new/master) and I'll add it here :)
 
-## Forks
+## Alternatives
 
 **Prefer a non-jquery version with pure JavaScript?**
 
 No problem, [@ricardobeat](https://github.com/ricardobeat) already did one. Check [his fork!](https://github.com/ricardobeat/github-repos)
+
+**Prefer Zepto instead of jQuery?**
+
+No problem, [@igorlima](https://github.com/igorlima) already did that. Check [demo/index-zepto.html](https://github.com/zenorocha/jquery-github/tree/master/demo/index-zepto.html)
 
 ## Contributing
 
