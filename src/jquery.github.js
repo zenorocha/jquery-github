@@ -1,6 +1,63 @@
+// -- Github Repository --------------------------------------------------------
+
+function GithubRepo( repo ) {
+	this.name = repo.name;
+	this.description = repo.description;
+	this.forks = repo.forks;
+	this.pushed_at = repo.pushed_at;
+	this.url = repo.url;
+	this.watchers = repo.watchers;
+}
+
+// Parses HTML template
+GithubRepo.prototype.toHTML = function () {
+	var self = this;
+
+	self.pushed_at = self._parsePushedDate( self.pushed_at ),
+	self.url  = self._parseURL( self.url );
+
+	return $(
+		"<div class='github-box'>" +
+			"<div class='github-box-header'>" +
+				"<h3>" +
+					"<a href='" + self.url + "'>" + self.name + "</a>" +
+				"</h3>" +
+				"<div class='github-stats'>" +
+					"<a class='repo-stars' title='Stars' data-icon='7' href='" + self.url + "/watchers'>" + self.watchers + "</a>" +
+					"<a class='repo-forks' title='Forks' data-icon='f' href='" + self.url + "/network'>" + self.forks + "</a>" +
+					"<a class='repo-issues' title='Issues' data-icon='i' href='" + self.url + "/issues'>" + self.open_issues + "</a>" +
+				"</div>" +
+			"</div>" +
+			"<div class='github-box-content'>" +
+				"<p>" + self.description + " &mdash; <a href='" + self.url + "#readme'>Read More</a></p>" +
+			"</div>" +
+			"<div class='github-box-download'>" +
+				"<p class='repo-update'>Latest commit to <strong>master</strong> on " + self.pushed_at + "</p>" +
+				"<a class='repo-download' title='Download as zip' data-icon='w' href='" + self.url + "/zipball/master'></a>" +
+			"</div>" +
+		"</div>");
+};
+
+// Parses pushed_at with date format
+GithubRepo.prototype._parsePushedDate = function ( pushed_at ) {
+	var self = this,
+			date = new Date( pushed_at );
+
+	return date.getDate() + "/" + ( date.getMonth() + 1 ) + "/" + date.getFullYear();
+};
+
+// Parses URL to be friendly
+GithubRepo.prototype._parseURL = function ( url ) {
+	var self = this;
+
+	return url.replace( "api.", "" ).replace( "repos/", "" );
+};
+
+// -- Github Plugin ------------------------------------------------------------
+
 function Github( element, options ) {
 	var self = this,
-			defaults   = {
+			defaults = {
 				iconStars:  true,
 				iconForks:  true,
 				iconIssues: false
@@ -59,7 +116,8 @@ Github.prototype.displayIcons = function () {
 // Apply results to HTML template
 Github.prototype.applyTemplate = function ( repo ) {
 	var self  = this,
-			$widget = self.parseTemplate( repo );
+			githubRepo = new GithubRepo( repo ),
+			$widget = githubRepo.toHTML();
 
 	$widget.appendTo( self.$container );
 };
@@ -100,49 +158,6 @@ Github.prototype.handlerSuccessfulRequest = function ( result_data ) {
 
 	self.applyTemplate( result_data );
 	self.cacheResults( result_data );
-};
-
-// Parses Pushed date with date format
-Github.prototype.parsePushedDate = function ( pushed_at ) {
-	var self = this,
-			date = new Date( pushed_at );
-
-	return date.getDate() + "/" + ( date.getMonth() + 1 ) + "/" + date.getFullYear();
-};
-
-// Parses repository URL to be friendly
-Github.prototype.parseRepositoryURL = function ( url ) {
-	var self = this;
-
-	return url.replace( "api.", "" ).replace( "repos/", "" );
-};
-
-// Parses HTML template
-Github.prototype.parseTemplate = function ( repo ) {
-	var self      = this,
-			pushed_at = self.parsePushedDate( repo.pushed_at ),
-			repo_url  = self.parseRepositoryURL( repo.url );
-
-	return $(
-		"<div class='github-box'>" +
-			"<div class='github-box-header'>" +
-				"<h3>" +
-					"<a href='" + repo_url + "'>" + repo.name + "</a>" +
-				"</h3>" +
-				"<div class='github-stats'>" +
-					"<a class='repo-stars' title='Stars' data-icon='7' href='" + repo_url + "/watchers'>" + repo.watchers + "</a>" +
-					"<a class='repo-forks' title='Forks' data-icon='f' href='" + repo_url + "/network'>" + repo.forks + "</a>" +
-					"<a class='repo-issues' title='Issues' data-icon='i' href='" + repo_url + "/issues'>" + repo.open_issues + "</a>" +
-				"</div>" +
-			"</div>" +
-			"<div class='github-box-content'>" +
-				"<p>" + repo.description + " &mdash; <a href='" + repo_url + "#readme'>Read More</a></p>" +
-			"</div>" +
-			"<div class='github-box-download'>" +
-				"<p class='repo-update'>Latest commit to <strong>master</strong> on " + pushed_at + "</p>" +
-				"<a class='repo-download' title='Download as zip' data-icon='w' href='" + repo_url + "/zipball/master'></a>" +
-			"</div>" +
-		"</div>");
 };
 
 // Request repositories from Github
