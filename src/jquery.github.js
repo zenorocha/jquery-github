@@ -113,17 +113,45 @@ Github.prototype.displayIcons = function () {
 	}
 };
 
-// Apply results to HTML template
-Github.prototype.applyTemplate = function ( repo ) {
-	var self  = this,
-			githubRepo = new GithubRepo( repo ),
-			$widget = githubRepo.toHTML();
+// Request repositories from Github
+Github.prototype.requestData = function ( repo ) {
+	var self = this;
 
-	$widget.appendTo( self.$container );
+	$.ajax({
+		url: "https://api.github.com/repos/" + repo,
+		dataType: "jsonp",
+		success: function( results ) {
+			var result_data = results.data;
+
+			// Handle API failures
+			if ( results.meta.status >= 400 && result_data.message ) {
+				self.handleErrorRequest( result_data );
+			}
+			else {
+				self.handleSuccessfulRequest( result_data );
+			}
+		}
+	});
+};
+
+// Handle Errors requests
+Github.prototype.handleErrorRequest = function ( result_data ) {
+	var self = this;
+
+	console.warn( result_data.message );
+	return;
+};
+
+// Handle Successful request
+Github.prototype.handleSuccessfulRequest = function ( result_data ) {
+	var self = this;
+
+	self.applyTemplate( result_data );
+	self.setCache( result_data );
 };
 
 // Stores repostories in sessionStorage if available
-Github.prototype.cacheResults = function ( result_data ) {
+Github.prototype.setCache = function ( result_data ) {
 	var self = this;
 
 	// Cache data
@@ -144,42 +172,16 @@ Github.prototype.getCache = function() {
 	}
 };
 
-// Handle Errors requests
-Github.prototype.handlerErrorRequests = function ( result_data ) {
-	var self = this;
+// Apply results to HTML template
+Github.prototype.applyTemplate = function ( repo ) {
+	var self  = this,
+			githubRepo = new GithubRepo( repo ),
+			$widget = githubRepo.toHTML();
 
-	console.warn( result_data.message );
-	return;
+	$widget.appendTo( self.$container );
 };
 
-// Handle Successful request
-Github.prototype.handlerSuccessfulRequest = function ( result_data ) {
-	var self = this;
-
-	self.applyTemplate( result_data );
-	self.cacheResults( result_data );
-};
-
-// Request repositories from Github
-Github.prototype.requestData = function ( repo ) {
-	var self = this;
-
-	$.ajax({
-		url: "https://api.github.com/repos/" + repo,
-		dataType: "jsonp",
-		success: function( results ) {
-			var result_data = results.data;
-
-			// Handle API failures
-			if ( results.meta.status >= 400 && result_data.message ) {
-				self.handlerErrorRequest();
-			}
-			else {
-				self.handlerSuccessfulRequest( result_data );
-			}
-		}
-	});
-};
+// -- Attach plugin to jQuery's prototype --------------------------------------
 
 ;( function ( $, window, undefined ) {
 
@@ -191,4 +193,4 @@ Github.prototype.requestData = function ( repo ) {
 		});
 	};
 
-}( window.jQuery || window.Zepto, window ));
+}( window.jQuery || window.Zepto, window ) );
