@@ -27,7 +27,9 @@ module.exports = function(grunt) {
 		jasmine: {
 			src: 'src/jquery.github.js',
 			options: {
-				specs: 'spec/*spec.js'
+				specs: 'spec/*spec.js',
+				helpers: 'spec/helpers/*.js',
+				vendor: 'lib/jquery.min.js'
 			}
 		},
 
