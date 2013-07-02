@@ -24,6 +24,13 @@ module.exports = function(grunt) {
 			}
 		},
 
+		jasmine: {
+			src: 'src/jquery.github.js',
+			options: {
+				specs: 'spec/*spec.js'
+			}
+		},
+
 		// Lint definitions
 		jshint: {
 			files: ['src/jquery.github.js'],
@@ -48,16 +55,17 @@ module.exports = function(grunt) {
 		watch: {
 			files: ['**/*'],
 			tasks: ['jshint', 'concat', 'uglify'],
-		},
+		}
 
 	});
 
 	grunt.loadNpmTasks('grunt-contrib-concat');
+	grunt.loadNpmTasks('grunt-contrib-jasmine');
 	grunt.loadNpmTasks('grunt-contrib-jshint');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 
 	grunt.registerTask('default', ['jshint', 'concat', 'uglify']);
-	grunt.registerTask('travis', ['jshint']);
+	grunt.registerTask('test', ['jshint', 'jasmine']);
 
 };
