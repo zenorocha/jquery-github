@@ -176,7 +176,7 @@ Check [CONTRIBUTING.md](https://github.com/zenorocha/jquery-github/blob/master/C
 
 ## History
 
-Check [HISTORY.md](https://github.com/zenorocha/jquery-github/blob/master/HISTORY.md)
+Check [Releases](https://github.com/zenorocha/jquery-github/releases)
 
 ## Credits
 
