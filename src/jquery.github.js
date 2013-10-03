@@ -7,6 +7,7 @@ function GithubRepo( repo ) {
 	this.pushed_at = repo.pushed_at;
 	this.url = repo.url;
 	this.watchers = repo.watchers;
+    this.open_issues = repo.open_issues;
 }
 
 // Parses HTML template
