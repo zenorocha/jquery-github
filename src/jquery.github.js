@@ -1,13 +1,13 @@
 // -- Github Repository --------------------------------------------------------
 
 function GithubRepo( repo ) {
-	this.name = repo.name;
 	this.description = repo.description;
 	this.forks = repo.forks;
+	this.name = repo.name;
+	this.open_issues = repo.open_issues;
 	this.pushed_at = repo.pushed_at;
 	this.url = repo.url;
 	this.watchers = repo.watchers;
-	this.open_issues = repo.open_issues;
 }
 
 // Parses HTML template

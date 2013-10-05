@@ -164,15 +164,15 @@ Let me know! Send a [tweet](http://twitter.com/zenorocha) or [pull request](http
 
 **Prefer a non-jquery version with pure JavaScript?**
 
-No problem, [@ricardobeat](https://github.com/ricardobeat) already did one. Check [his fork!](https://github.com/ricardobeat/github-repos)
+No problem, [@ricardobeat](https://github.com/ricardobeat) already did one. Check [his fork](https://github.com/ricardobeat/github-repos)!
 
 **Prefer Zepto instead of jQuery?**
 
-No problem, [@igorlima](https://github.com/igorlima) already did that. Check [demo/index-zepto.html](https://github.com/zenorocha/jquery-github/tree/master/demo/index-zepto.html)
+No problem, [@igorlima](https://github.com/igorlima) already did that. Check [demo/index-zepto.html](https://github.com/zenorocha/jquery-github/tree/master/demo/index-zepto.html).
 
 ## Contributing
 
-Check [CONTRIBUTING.md](https://github.com/zenorocha/jquery-github/blob/master/CONTRIBUTING.md)
+Check [CONTRIBUTING.md](https://github.com/zenorocha/jquery-github/blob/master/CONTRIBUTING.md).
 
 ## History
 
@@ -180,8 +180,8 @@ Check [Release](https://github.com/zenorocha/jquery-github/releases) list.
 
 ## Credits
 
-Built on top of [jQuery Boilerplate](http://jqueryboilerplate.com)
+Built on top of [jQuery Boilerplate](http://jqueryboilerplate.com).
 
 ## License
 
-[MIT License](http://zenorocha.mit-license.org/)
+[MIT License](http://zenorocha.mit-license.org/) © Zeno Rocha
