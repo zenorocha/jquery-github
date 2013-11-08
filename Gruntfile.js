@@ -24,6 +24,20 @@ module.exports = function(grunt) {
 			}
 		},
 
+		lintspaces: {
+			all: {
+				src: [
+					'*', 'src/*', 'spec/*', 'demo/*', 'assets/base.css'
+				],
+				options: {
+					newline: true,
+					trailingspaces: true,
+					indentation: 'tabs',
+					spaces: 2
+				}
+			}
+		},
+
 		jasmine: {
 			src: 'src/jquery.github.js',
 			options: {
@@ -33,7 +47,6 @@ module.exports = function(grunt) {
 			}
 		},
 
-		// Lint definitions
 		jshint: {
 			files: ['src/jquery.github.js'],
 			options: {
@@ -41,7 +54,6 @@ module.exports = function(grunt) {
 			}
 		},
 
-		// Minify definitions
 		uglify: {
 			options: {
 				banner: '<%= meta.banner %>'
@@ -61,10 +73,14 @@ module.exports = function(grunt) {
 
 	});
 
-	// Load all Grunt tasks installed from NPM
-	require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
+	grunt.loadNpmTasks('grunt-contrib-concat');
+	grunt.loadNpmTasks('grunt-contrib-jasmine');
+	grunt.loadNpmTasks('grunt-contrib-jshint');
+	grunt.loadNpmTasks('grunt-contrib-uglify');
+	grunt.loadNpmTasks('grunt-contrib-watch');
+	grunt.loadNpmTasks('grunt-lintspaces');
 
-	grunt.registerTask('default', ['jshint', 'concat', 'uglify']);
-	grunt.registerTask('test', ['jshint', 'jasmine']);
+	grunt.registerTask('default', ['lintspaces', 'jshint', 'concat', 'uglify']);
+	grunt.registerTask('test', ['lintspaces', 'jshint', 'jasmine']);
 
 };

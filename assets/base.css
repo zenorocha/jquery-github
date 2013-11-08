@@ -198,9 +198,9 @@
 	font-family: 'EntypoRegular';
 	src: url('Entypo-webfont.eot');
 	src: url('Entypo-webfont.eot?#iefix') format('embedded-opentype'),
-			 url('Entypo-webfont.woff') format('woff'),
-			 url('Entypo-webfont.ttf') format('truetype'),
-			 url('Entypo-webfont.svg#EntypoRegular') format('svg');
+		url('Entypo-webfont.woff') format('woff'),
+		url('Entypo-webfont.ttf') format('truetype'),
+		url('Entypo-webfont.svg#EntypoRegular') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
