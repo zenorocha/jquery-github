@@ -170,6 +170,14 @@ No problem, [@ricardobeat](https://github.com/ricardobeat) already did one. Chec
 
 No problem, [@igorlima](https://github.com/igorlima) already did that. Check [demo/index-zepto.html](https://github.com/zenorocha/jquery-github/tree/master/demo/index-zepto.html).
 
+## Browser Support
+
+We do care about it.
+
+![IE](https://raw.github.com/paulirish/browser-logos/master/ie/ie_48x48.png) | ![Chrome](https://raw.github.com/paulirish/browser-logos/master/chrome/chrome_48x48.png) | ![Firefox](https://raw.github.com/paulirish/browser-logos/master/firefox/firefox_48x48.png) | ![Opera](https://raw.github.com/paulirish/browser-logos/master/opera/opera_48x48.png) | ![Safari](https://raw.github.com/paulirish/browser-logos/master/safari/safari_48x48.png)
+--- | --- | --- | --- | --- |
+IE 8+ ✔ | Latest ✔ | Latest ✔ | Latest ✔ | Latest ✔ |
+
 ## Contributing
 
 Check [CONTRIBUTING.md](https://github.com/zenorocha/jquery-github/blob/master/CONTRIBUTING.md).
