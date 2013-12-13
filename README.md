@@ -2,6 +2,22 @@
 
 [![Github Repo Demonstration](http://f.cl.ly/items/2I3u29002A1g2w1R1I0X/Screen%20Shot%202013-01-17%20at%202.16.36%20PM.png)](http://zenorocha.github.com/jquery-github/)
 
+## Getting started
+
+Three quick start options are available:
+
+* [Download latest release](https://github.com/zenorocha/jquery-github/releases)
+* Clone the repo: `git@github.com:zenorocha/jquery-github.git`
+* Install with [Bower](http://bower.io): `bower install bootstrap`
+
+## Setup
+
+Use [Bower](http://bower.io) to fetch all dependencies and you're ready to go:
+
+```sh
+$ bower install
+```
+
 ## Usage
 
 Create an attribute called `data-repo`:
