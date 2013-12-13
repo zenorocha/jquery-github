@@ -2,6 +2,16 @@
 
 [![Github Repo Demonstration](http://f.cl.ly/items/2I3u29002A1g2w1R1I0X/Screen%20Shot%202013-01-17%20at%202.16.36%20PM.png)](http://zenorocha.github.com/jquery-github/)
 
+> A jQuery plugin to display your Github Repositories.
+
+## Browser Support
+
+We do care about it.
+
+![IE](https://raw.github.com/paulirish/browser-logos/master/ie/ie_48x48.png) | ![Chrome](https://raw.github.com/paulirish/browser-logos/master/chrome/chrome_48x48.png) | ![Firefox](https://raw.github.com/paulirish/browser-logos/master/firefox/firefox_48x48.png) | ![Opera](https://raw.github.com/paulirish/browser-logos/master/opera/opera_48x48.png) | ![Safari](https://raw.github.com/paulirish/browser-logos/master/safari/safari_48x48.png)
+--- | --- | --- | --- | --- |
+IE 8+ ✔ | Latest ✔ | Latest ✔ | Latest ✔ | Latest ✔ |
+
 ## Getting started
 
 Three quick start options are available:
@@ -12,11 +22,13 @@ Three quick start options are available:
 
 ## Setup
 
-Use [Bower](http://bower.io) to fetch all dependencies and you're ready to go:
+Use [Bower](http://bower.io) to fetch all dependencies:
 
 ```sh
 $ bower install
 ```
+
+Now you're ready to go!
 
 ## Usage
 
@@ -92,7 +104,6 @@ The basic structure of the project is given in the following way:
 |-- dist/
 |   |-- jquery.boilerplate.js
 |   |-- jquery.boilerplate.min.js
-|-- lib/
 |-- src/
 |   |-- jquery.boilerplate.coffee
 |   |-- jquery.boilerplate.js
@@ -109,6 +120,10 @@ The basic structure of the project is given in the following way:
 
 Contains CSS and Font files to create that lovely Github box.
 
+#### bower_components/
+
+Contains all dependencies like jQuery and Zepto.
+
 #### [demo/](https://github.com/zenorocha/jquery-github/tree/master/demo)
 
 Contains a simple HTML file to demonstrate the plugin.
@@ -116,10 +131,6 @@ Contains a simple HTML file to demonstrate the plugin.
 #### [dist/](https://github.com/zenorocha/jquery-github/tree/master/dist)
 
 This is where the generated files are stored once Grunt runs JSHint and other stuff.
-
-#### [lib/](https://github.com/zenorocha/jquery-github/tree/master/lib)
-
-Contains libraries like jQuery and Zepto.
 
 #### [src/](https://github.com/zenorocha/jquery-github/tree/master/src)
 
@@ -185,14 +196,6 @@ No problem, [@ricardobeat](https://github.com/ricardobeat) already did one. Chec
 **Prefer Zepto instead of jQuery?**
 
 No problem, [@igorlima](https://github.com/igorlima) already did that. Check [demo/index-zepto.html](https://github.com/zenorocha/jquery-github/tree/master/demo/index-zepto.html).
-
-## Browser Support
-
-We do care about it.
-
-![IE](https://raw.github.com/paulirish/browser-logos/master/ie/ie_48x48.png) | ![Chrome](https://raw.github.com/paulirish/browser-logos/master/chrome/chrome_48x48.png) | ![Firefox](https://raw.github.com/paulirish/browser-logos/master/firefox/firefox_48x48.png) | ![Opera](https://raw.github.com/paulirish/browser-logos/master/opera/opera_48x48.png) | ![Safari](https://raw.github.com/paulirish/browser-logos/master/safari/safari_48x48.png)
---- | --- | --- | --- | --- |
-IE 8+ ✔ | Latest ✔ | Latest ✔ | Latest ✔ | Latest ✔ |
 
 ## Contributing
 

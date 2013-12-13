@@ -2,7 +2,6 @@ module.exports = function(grunt) {
 
 	grunt.initConfig({
 
-		// Meta informations
 		pkg: grunt.file.readJSON('package.json'),
 		meta: {
 			banner: '/*\n' +
@@ -64,8 +63,6 @@ module.exports = function(grunt) {
 			}
 		},
 
-		// Run JSHint, concat, minify and send it to the dist folder
-		// any time a file is added, changed or deleted
 		watch: {
 			files: ['**/*'],
 			tasks: ['jshint', 'concat', 'uglify'],

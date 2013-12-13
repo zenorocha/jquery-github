@@ -1,19 +1,19 @@
 {
-  "name": "jquery-github",
-  "version": "0.3.2",
-  "homepage": "https://github.com/zenorocha/jquery-github",
-  "authors": [
-    "Zeno Rocha <hi@zenorocha.com>"
-  ],
-  "description": "A jQuery plugin to display your Github Repositories.",
-  "main": "src/jquery.github.js",
-  "keywords": [
-    "jquery",
-    "github"
-  ],
-  "license": "MIT",
-  "dependencies": {
-    "zepto": "~1.0.0",
-    "jquery": "~2.0.3"
-  }
+	"name": "jquery-github",
+	"version": "0.3.2",
+	"homepage": "https://github.com/zenorocha/jquery-github",
+	"authors": [
+		"Zeno Rocha <hi@zenorocha.com>"
+	],
+	"description": "A jQuery plugin to display your Github Repositories.",
+	"main": "src/jquery.github.js",
+	"keywords": [
+		"jquery",
+		"github"
+	],
+	"license": "MIT",
+	"dependencies": {
+		"zepto": "~1.0.0",
+		"jquery": "~2.0.3"
+	}
 }
