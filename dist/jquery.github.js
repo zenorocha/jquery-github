@@ -1,9 +1,9 @@
 /*
- *  jQuery Github - v0.3.2
+ *  jQuery Github - v0.3.3
  *  A jQuery plugin to display your Github Repositories.
  *  https://github.com/zenorocha/jquery-github/
  *
- *  Copyright (c) 2013
+ *  Copyright (c) 2014
  *  MIT License
  */
 // -- Github Repository --------------------------------------------------------
@@ -99,14 +99,14 @@ Github.prototype.init = function () {
 
 // Display or hide icons
 Github.prototype.displayIcons = function () {
-	$iconStars = $( ".repo-stars" );
-	$iconForks = $( ".repo-forks" );
-	$iconIssues = $( ".repo-issues" );
-	var options = this.options;
+	var options = this.options,
+			$iconStars = $( ".repo-stars" ),
+			$iconForks = $( ".repo-forks" ),
+			$iconIssues = $( ".repo-issues" );
 
 	$iconStars.css( "display", options.iconStars ? "inline-block" : "none" );
 	$iconForks.css( "display", options.iconForks ? "inline-block" : "none" );
-	$iconIssues.css( "display", options.iconIssues ? "inline-block" : none );
+	$iconIssues.css( "display", options.iconIssues ? "inline-block" : "none" );
 };
 
 // Request repositories from Github
