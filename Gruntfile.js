@@ -3,6 +3,7 @@ module.exports = function(grunt) {
 	grunt.initConfig({
 
 		pkg: grunt.file.readJSON('package.json'),
+
 		meta: {
 			banner: '/*\n' +
 				' *  <%= pkg.title || pkg.name %> - v<%= pkg.version %>\n' +
@@ -13,6 +14,21 @@ module.exports = function(grunt) {
 				' *  MIT License\n' +
 				' */\n'
 		},
+
+		bump: {
+			options: {
+				files: ['bower.json', 'package.json'],
+				commit: true,
+				commitMessage: 'Release v%VERSION%',
+				commitFiles: ['bower.json', 'package.json'],
+				createTag: true,
+				tagName: '%VERSION%',
+				tagMessage: '',
+				push: true,
+				pushTo: 'origin'
+			}
+		},
+
 		concat: {
 			options: {
 				banner: '<%= meta.banner %>'
@@ -70,6 +86,7 @@ module.exports = function(grunt) {
 
 	});
 
+	grunt.loadNpmTasks('grunt-bump');
 	grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-contrib-jasmine');
 	grunt.loadNpmTasks('grunt-contrib-jshint');
@@ -78,6 +95,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-lintspaces');
 
 	grunt.registerTask('default', ['lintspaces', 'jshint', 'concat', 'uglify']);
+	grunt.registerTask('release', ['bump-only:patch', 'default', 'bump-commit']);
 	grunt.registerTask('test', ['lintspaces', 'jshint', 'jasmine']);
 
 };
