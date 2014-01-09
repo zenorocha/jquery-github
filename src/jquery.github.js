@@ -91,27 +91,14 @@ Github.prototype.init = function () {
 
 // Display or hide icons
 Github.prototype.displayIcons = function () {
-	$iconStars = $( ".repo-stars" );
-	$iconForks = $( ".repo-forks" );
-	$iconIssues = $( ".repo-issues" );
+	var options = this.options,
+			$iconStars = $( ".repo-stars" ),
+			$iconForks = $( ".repo-forks" ),
+			$iconIssues = $( ".repo-issues" );
 
-	if ( this.options.iconStars ) {
-		$iconStars.css( "display", "inline-block" );
-	} else {
-		$iconStars.css( "display", "none" );
-	}
-
-	if ( this.options.iconForks ) {
-		$iconForks.css( "display", "inline-block" );
-	} else {
-		$iconForks.css( "display", "none" );
-	}
-
-	if ( this.options.iconIssues ) {
-		$iconIssues.css( "display", "inline-block" );
-	} else {
-		$iconIssues.css( "display", "none" );
-	}
+	$iconStars.css( "display", options.iconStars ? "inline-block" : "none" );
+	$iconForks.css( "display", options.iconForks ? "inline-block" : "none" );
+	$iconIssues.css( "display", options.iconIssues ? "inline-block" : "none" );
 };
 
 // Request repositories from Github
