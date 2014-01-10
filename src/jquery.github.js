@@ -83,10 +83,10 @@ Github.prototype.init = function () {
 
 	if ( cached !== null ) {
 		self.applyTemplate( JSON.parse( cached ) );
+		return;
 	}
-	else {
-		self.requestData( self.repo );
-	}
+	
+	self.requestData( self.repo );
 };
 
 // Display or hide icons
@@ -109,51 +109,43 @@ Github.prototype.requestData = function ( repo ) {
 		url: "https://api.github.com/repos/" + repo,
 		dataType: "jsonp",
 		success: function( results ) {
-			var result_data = results.data;
-
-			// Handle API failures
-			if ( results.meta.status >= 400 && result_data.message ) {
+			var result_data = results.data,
+			    isFailling = results.meta.status >= 400 && result_data.message;
+			
+			if ( isFailling ) {
 				self.handleErrorRequest( result_data );
+				return;
 			}
-			else {
-				self.handleSuccessfulRequest( result_data );
-			}
+			
+			self.handleSuccessfulRequest( result_data );
 		}
 	});
 };
 
 // Handle Errors requests
 Github.prototype.handleErrorRequest = function ( result_data ) {
-	var self = this;
-
 	console.warn( result_data.message );
 	return;
 };
 
 // Handle Successful request
 Github.prototype.handleSuccessfulRequest = function ( result_data ) {
-	var self = this;
-
-	self.applyTemplate( result_data );
-	self.setCache( result_data );
+	this.applyTemplate( result_data );
+	this.setCache( result_data );
 };
 
 // Stores repostories in sessionStorage if available
 Github.prototype.setCache = function ( result_data ) {
-	var self = this;
-
 	// Cache data
 	if ( window.sessionStorage ) {
-		window.sessionStorage.setItem( "gh-repos:" + self.repo, JSON.stringify( result_data ) );
+		window.sessionStorage.setItem( "gh-repos:" + this.repo, JSON.stringify( result_data ) );
 	}
 };
 
 // Grab cached results
 Github.prototype.getCache = function() {
-	var self = this;
-
 	if ( window.sessionStorage ) {
-		return window.sessionStorage.getItem( "gh-repos:" + self.repo );
+		return window.sessionStorage.getItem( "gh-repos:" + this.repo );
 	}
 	else {
 		return false;
@@ -162,11 +154,10 @@ Github.prototype.getCache = function() {
 
 // Apply results to HTML template
 Github.prototype.applyTemplate = function ( repo ) {
-	var self  = this,
-			githubRepo = new GithubRepo( repo ),
-			$widget = githubRepo.toHTML();
+	var githubRepo = new GithubRepo( repo ),
+	    $widget = githubRepo.toHTML();
 
-	$widget.appendTo( self.$container );
+	$widget.appendTo( this.$container );
 };
 
 // -- Attach plugin to jQuery's prototype --------------------------------------
