@@ -12,81 +12,74 @@ function GithubRepo( repo ) {
 
 // Parses HTML template
 GithubRepo.prototype.toHTML = function () {
-	var self = this;
-
-	self.pushed_at = self._parsePushedDate( self.pushed_at ),
-	self.url  = self._parseURL( self.url );
+	this.pushed_at = this._parsePushedDate( this.pushed_at ),
+	this.url  = this._parseURL( this.url );
 
 	return $(
 		"<div class='github-box'>" +
 			"<div class='github-box-header'>" +
 				"<h3>" +
-					"<a href='" + self.url + "'>" + self.name + "</a>" +
+					"<a href='" + this.url + "'>" + this.name + "</a>" +
 				"</h3>" +
 				"<div class='github-stats'>" +
-					"<a class='repo-stars' title='Stars' data-icon='7' href='" + self.url + "/watchers'>" + self.watchers + "</a>" +
-					"<a class='repo-forks' title='Forks' data-icon='f' href='" + self.url + "/network'>" + self.forks + "</a>" +
-					"<a class='repo-issues' title='Issues' data-icon='i' href='" + self.url + "/issues'>" + self.open_issues + "</a>" +
+					"<a class='repo-stars' title='Stars' data-icon='7' href='" + this.url + "/watchers'>" + this.watchers + "</a>" +
+					"<a class='repo-forks' title='Forks' data-icon='f' href='" + this.url + "/network'>" + this.forks + "</a>" +
+					"<a class='repo-issues' title='Issues' data-icon='i' href='" + this.url + "/issues'>" + this.open_issues + "</a>" +
 				"</div>" +
 			"</div>" +
 			"<div class='github-box-content'>" +
-				"<p>" + self.description + " &mdash; <a href='" + self.url + "#readme'>Read More</a></p>" +
+				"<p>" + this.description + " &mdash; <a href='" + this.url + "#readme'>Read More</a></p>" +
 			"</div>" +
 			"<div class='github-box-download'>" +
-				"<p class='repo-update'>Latest commit to <strong>master</strong> on " + self.pushed_at + "</p>" +
-				"<a class='repo-download' title='Download as zip' data-icon='w' href='" + self.url + "/zipball/master'></a>" +
+				"<p class='repo-update'>Latest commit to <strong>master</strong> on " + this.pushed_at + "</p>" +
+				"<a class='repo-download' title='Download as zip' data-icon='w' href='" + this.url + "/zipball/master'></a>" +
 			"</div>" +
 		"</div>");
 };
 
 // Parses pushed_at with date format
 GithubRepo.prototype._parsePushedDate = function ( pushed_at ) {
-	var self = this,
-			date = new Date( pushed_at );
+	var date = new Date( pushed_at );
 
 	return date.getDate() + "/" + ( date.getMonth() + 1 ) + "/" + date.getFullYear();
 };
 
 // Parses URL to be friendly
 GithubRepo.prototype._parseURL = function ( url ) {
-	var self = this;
-
 	return url.replace( "api.", "" ).replace( "repos/", "" );
 };
 
 // -- Github Plugin ------------------------------------------------------------
 
 function Github( element, options ) {
-	var self = this,
-			defaults = {
+	var defaults = {
 				iconStars:  true,
 				iconForks:  true,
 				iconIssues: false
 			};
 
-	self.element    = element;
-	self.$container = $( element );
-	self.repo       = self.$container.attr( "data-repo" );
+	this.element    = element;
+	this.$container = $( element );
+	this.repo       = this.$container.attr( "data-repo" );
 
-	self.options = $.extend( {}, defaults, options ) ;
+	this.options = $.extend( {}, defaults, options ) ;
 
-	self._defaults = defaults;
+	this._defaults = defaults;
 
-	self.init();
-	self.displayIcons();
+	this.init();
+	this.displayIcons();
 }
 
 // Initializer
 Github.prototype.init = function () {
-	var self   = this,
-			cached = self.getCache();
+	var cached = this.getCache();
 
 	if ( cached !== null ) {
-		self.applyTemplate( JSON.parse( cached ) );
+		this.applyTemplate( JSON.parse( cached ) );
 		return;
 	}
 
-	self.requestData( self.repo );
+	this.requestData( this.repo );
 };
 
 // Display or hide icons
@@ -103,7 +96,7 @@ Github.prototype.displayIcons = function () {
 
 // Request repositories from Github
 Github.prototype.requestData = function ( repo ) {
-	var self = this;
+	var that = this;
 
 	$.ajax({
 		url: "https://api.github.com/repos/" + repo,
@@ -113,11 +106,11 @@ Github.prototype.requestData = function ( repo ) {
 				isFailling = results.meta.status >= 400 && result_data.message;
 
 			if ( isFailling ) {
-				self.handleErrorRequest( result_data );
+				that.handleErrorRequest( result_data );
 				return;
 			}
 
-			self.handleSuccessfulRequest( result_data );
+			that.handleSuccessfulRequest( result_data );
 		}
 	});
 };
