@@ -85,7 +85,7 @@ Github.prototype.init = function () {
 		self.applyTemplate( JSON.parse( cached ) );
 		return;
 	}
-	
+
 	self.requestData( self.repo );
 };
 
@@ -110,13 +110,13 @@ Github.prototype.requestData = function ( repo ) {
 		dataType: "jsonp",
 		success: function( results ) {
 			var result_data = results.data,
-			    isFailling = results.meta.status >= 400 && result_data.message;
-			
+				isFailling = results.meta.status >= 400 && result_data.message;
+
 			if ( isFailling ) {
 				self.handleErrorRequest( result_data );
 				return;
 			}
-			
+
 			self.handleSuccessfulRequest( result_data );
 		}
 	});
@@ -155,7 +155,7 @@ Github.prototype.getCache = function() {
 // Apply results to HTML template
 Github.prototype.applyTemplate = function ( repo ) {
 	var githubRepo = new GithubRepo( repo ),
-	    $widget = githubRepo.toHTML();
+		$widget = githubRepo.toHTML();
 
 	$widget.appendTo( this.$container );
 };
