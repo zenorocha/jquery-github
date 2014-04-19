@@ -73,23 +73,11 @@ $("[data-repo]").github({
 });
 ```
 
-#### iconStars
-
-*Type: `Boolean` Default: `true`*
-
-Display the number of stars in a repository.
-
-#### iconForks
-
-*Type: `Boolean` Default: `true`*
-
-Display the number of forks in a repository.
-
-#### iconIssues
-
-*Type: `Boolean` Default: `false`*
-
-Display the number of issues in a repository.
+Attribute			| Type				| Default		| Description
+---						| ---					| ---				| ---
+`iconStars`		| *Boolean*		| `true`		| Displays the number of stars in a repository.
+`iconForks`		| *Boolean*		| `true`		| Displays the number of forks in a repository.
+`iconIssues`	| *Boolean*		| `false`		| Displays the number of issues in a repository.
 
 ## Structure
 
@@ -203,7 +191,7 @@ Check [CONTRIBUTING.md](https://github.com/zenorocha/jquery-github/blob/master/C
 
 ## History
 
-Check [Release](https://github.com/zenorocha/jquery-github/releases) list.
+Check [Releases](https://github.com/zenorocha/jquery-github/releases) for detailed changelog.
 
 ## Credits
 
