@@ -2,12 +2,12 @@
 
 function GithubRepo( repo ) {
 	this.description = repo.description;
-	this.forks = repo.forks;
+	this.forks = repo.forks_count;
 	this.name = repo.name;
 	this.open_issues = repo.open_issues;
 	this.pushed_at = repo.pushed_at;
 	this.url = repo.url;
-	this.watchers = repo.watchers;
+	this.stargazers = repo.stargazers_count;
 }
 
 // Parses HTML template
@@ -22,7 +22,7 @@ GithubRepo.prototype.toHTML = function () {
 					"<a href='" + this.url + "'>" + this.name + "</a>" +
 				"</h3>" +
 				"<div class='github-stats'>" +
-					"<a class='repo-stars' title='Stars' data-icon='7' href='" + this.url + "/watchers'>" + this.watchers + "</a>" +
+					"<a class='repo-stars' title='Stars' data-icon='7' href='" + this.url + "/stargazers'>" + this.stargazers + "</a>" +
 					"<a class='repo-forks' title='Forks' data-icon='f' href='" + this.url + "/network'>" + this.forks + "</a>" +
 					"<a class='repo-issues' title='Issues' data-icon='i' href='" + this.url + "/issues'>" + this.open_issues + "</a>" +
 				"</div>" +
