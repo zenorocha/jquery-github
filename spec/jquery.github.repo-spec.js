@@ -9,7 +9,7 @@ describe("jquery.github.repo", function() {
 			forks: 33,
 			pushed_at: "2013-07-02T12:08:36Z",
 			url: "https://api.github.com/repos/zenorocha/jquery-github",
-			watchers: 131
+			stargazers: 131
 		});
 	});
 
@@ -39,8 +39,8 @@ describe("jquery.github.repo", function() {
 				.toEqual("https://api.github.com/repos/zenorocha/jquery-github");
 		});
 
-		it("should be repository's number of watchers", function() {
-			expect(instance.watchers)
+		it("should be repository's number of stargazers", function() {
+			expect(instance.stargazers)
 				.toEqual(131);
 		});
 	});
