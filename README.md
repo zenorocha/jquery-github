@@ -18,7 +18,7 @@ Three quick start options are available:
 
 * [Download latest release](https://github.com/zenorocha/jquery-github/releases)
 * Clone the repo: `git@github.com:zenorocha/jquery-github.git`
-* Install with [Bower](http://bower.io): `bower install bootstrap`
+* Install with [Bower](http://bower.io): `bower install jquery-github`
 
 ## Setup
 
