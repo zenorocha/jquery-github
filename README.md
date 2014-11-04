@@ -1,4 +1,8 @@
-# jQuery Github [![Build Status](https://secure.travis-ci.org/zenorocha/jquery-github.svg?branch=master)](https://travis-ci.org/zenorocha/jquery-github) ![Bower Version](https://badge.fury.io/bo/jquery-github.svg)
+# jQuery Github
+
+[![Bower version](http://img.shields.io/bower/v/jquery-github.svg?style=flat)](http://bower.io/search/?q=jquery-github)
+[![Build Status](http://img.shields.io/travis/zenorocha/jquery-github/master.svg?style=flat)](https://travis-ci.org/zenorocha/jquery-github)
+[![DevDependencies Status](http://img.shields.io/david/dev/zenorocha/jquery-github.svg?style=flat)](https://david-dm.org/zenorocha/jquery-github#info=devDependencies)
 
 [![Github Repo Demonstration](https://cloud.githubusercontent.com/assets/398893/3528396/064b1fa4-078f-11e4-8460-2593d190c2fc.png)](http://zenorocha.github.io/jquery-github/)
 
