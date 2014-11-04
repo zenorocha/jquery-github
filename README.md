@@ -185,6 +185,10 @@ No problem, [@ricardobeat](https://github.com/ricardobeat) already did one. Chec
 
 No problem, [@igorlima](https://github.com/igorlima) already did that. Check [demo/index-zepto.html](https://github.com/zenorocha/jquery-github/tree/master/demo/index-zepto.html).
 
+**Prefer AngularJS instead of jQuery?**
+
+No problem, [@lucasconstantino](https://github.com/lucasconstantino) already did that. Check [his fork](https://github.com/lucasconstantino/angular-github-repo)!
+
 ## Contributing
 
 Check [CONTRIBUTING.md](https://github.com/zenorocha/jquery-github/blob/master/CONTRIBUTING.md).
