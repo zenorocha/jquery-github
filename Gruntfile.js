@@ -42,7 +42,7 @@ module.exports = function(grunt) {
 		lintspaces: {
 			all: {
 				src: [
-					'*', 'src/*', 'spec/*', 'demo/*', 'assets/base.css'
+					'*', 'src/*', 'spec/*', 'demo/*', 'assets/base.css', '!package.json'
 				],
 				options: {
 					newline: true,
