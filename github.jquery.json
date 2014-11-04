@@ -7,7 +7,7 @@
 		"repositories",
 		"git"
 	],
-	"version": "0.3.4",
+	"version": "0.4.0",
 	"author": {
 		"name": "Zeno Rocha",
 		"url": "https://github.com/zenorocha"
