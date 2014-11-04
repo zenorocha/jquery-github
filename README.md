@@ -35,7 +35,7 @@ Now you're ready to go!
 Create an attribute called `data-repo`:
 
 ```html
-<div data-repo="jquery-boilerplate/boilerplate"></div>
+<div data-repo="jquery-boilerplate/jquery-boilerplate"></div>
 ```
 
 Include jQuery:
