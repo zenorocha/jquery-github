@@ -45,7 +45,7 @@ Create an attribute called `data-repo`:
 Include jQuery:
 
 ```html
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 ```
 
 Include plugin's CSS and JS:

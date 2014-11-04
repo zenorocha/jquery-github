@@ -17,10 +17,10 @@ module.exports = function(grunt) {
 
 		bump: {
 			options: {
-				files: ['bower.json'],
+				files: ['bower.json', 'github.jquery.json'],
 				commit: true,
 				commitMessage: 'Release v%VERSION%',
-				commitFiles: ['bower.json'],
+				commitFiles: ['bower.json', 'github.jquery.json', 'dist'],
 				createTag: true,
 				tagName: '%VERSION%',
 				tagMessage: '',
