@@ -6,10 +6,10 @@ describe("jquery.github.repo", function() {
 		instance = new GithubRepo({
 			name: "jquery-github",
 			description: "A jQuery plugin to display your Github Repositories",
-			forks: 33,
+			forks_count: 33,
 			pushed_at: "2013-07-02T12:08:36Z",
 			url: "https://api.github.com/repos/zenorocha/jquery-github",
-			stargazers: 131
+			stargazers_count: 131
 		});
 	});
 
