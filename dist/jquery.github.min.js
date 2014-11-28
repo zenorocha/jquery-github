@@ -1,5 +1,5 @@
 /*
- *  jquery-github - v0.3.4
+ *  jquery-github - v0.4.0
  *  A jQuery plugin to display your Github Repositories.
  *  https://github.com/zenorocha/jquery-github
  *
