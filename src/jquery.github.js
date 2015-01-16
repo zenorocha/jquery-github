@@ -67,7 +67,6 @@ function Github( element, options ) {
 	this._defaults = defaults;
 
 	this.init();
-	this.displayIcons();
 }
 
 // Initializer
@@ -151,6 +150,8 @@ Github.prototype.applyTemplate = function ( repo ) {
 		$widget = githubRepo.toHTML();
 
 	$widget.appendTo( this.$container );
+
+	this.displayIcons();
 };
 
 // -- Attach plugin to jQuery's prototype --------------------------------------
