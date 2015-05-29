@@ -72,14 +72,17 @@
   opacity: 1;
 }
 
-.github-box .github-box-header .github-stats .repo-watchers {
-  border-right: 1px solid #ddd;
-  background-position: 3px 4px;
+.github-box .github-box-header .github-stats .repo-stars {
+  background-position: 2px 3px;
 }
 
 .github-box .github-box-header .github-stats .repo-forks {
   background-position: 2px -14px;
   padding-left: 15px;
+}
+
+.github-box .github-box-header .github-stats .repo-issues {
+  background-position: 2px -32px;
 }
 
 /* Github Box Content */
