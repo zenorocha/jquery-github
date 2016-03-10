@@ -34,11 +34,6 @@ describe("jquery.github.repo", function() {
 				.toEqual("2013-07-02T12:08:36Z");
 		});
 
-		it("should be repository's api url", function() {
-			expect(instance.url)
-				.toEqual("https://api.github.com/repos/zenorocha/jquery-github");
-		});
-
 		it("should be repository's number of stargazers", function() {
 			expect(instance.stargazers)
 				.toEqual(131);
@@ -52,14 +47,4 @@ describe("jquery.github.repo", function() {
 		});
 	});
 
-	describe("execute _parseURL()", function() {
-		it("should parse repository's url attribute", function() {
-			expect(instance._parseURL(instance.url))
-				.toEqual("https://github.com/zenorocha/jquery-github");
-		});
-	});
-
-	describe("execute toHTML()", function() {
-		// TODO
-	});
 });
