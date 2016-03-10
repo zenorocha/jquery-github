@@ -6,14 +6,13 @@ function GithubRepo( repo ) {
 	this.name = repo.name;
 	this.open_issues = repo.open_issues;
 	this.pushed_at = repo.pushed_at;
-	this.url = repo.url;
+	this.url = repo.html_url;
 	this.stargazers = repo.stargazers_count;
 }
 
 // Parses HTML template
 GithubRepo.prototype.toHTML = function () {
-	this.pushed_at = this._parsePushedDate( this.pushed_at ),
-	this.url  = this._parseURL( this.url );
+	this.pushed_at = this._parsePushedDate( this.pushed_at );
 
 	return $(
 		"<div class='github-box'>" +
@@ -42,11 +41,6 @@ GithubRepo.prototype._parsePushedDate = function ( pushed_at ) {
 	var date = new Date( pushed_at );
 
 	return date.getDate() + "/" + ( date.getMonth() + 1 ) + "/" + date.getFullYear();
-};
-
-// Parses URL to be friendly
-GithubRepo.prototype._parseURL = function ( url ) {
-	return url.replace( "api.", "" ).replace( "repos/", "" );
 };
 
 // -- Github Plugin ------------------------------------------------------------
